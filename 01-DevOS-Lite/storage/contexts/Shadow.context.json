@@ -1,0 +1,307 @@
+{
+  "schemaVersion": "1.0",
+  "feature": "Shadow",
+  "files": [
+    "Assets/Scripts/ShadowHealth.cs",
+    "Assets/Scripts/ShadowLevel.cs"
+  ],
+  "ownedFiles": [],
+  "integrationPoints": [],
+  "commits": [],
+  "decisions": [],
+  "dependencies": {
+    "schemaVersion": "1.0",
+    "generatedAt": "2026-07-09T19:10:07.977Z",
+    "files": {
+      "Assets/Scripts/ShadowHealth.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "ShadowHealth"
+        ],
+        "methods": [
+          {
+            "visibility": "private",
+            "name": "Awake"
+          },
+          {
+            "visibility": "private",
+            "name": "Start"
+          },
+          {
+            "visibility": "public",
+            "name": "TakeDamage"
+          },
+          {
+            "visibility": "private",
+            "name": "OnDamaged"
+          },
+          {
+            "visibility": "private",
+            "name": "Die"
+          },
+          {
+            "visibility": "private",
+            "name": "OnDeath"
+          }
+        ],
+        "todos": [],
+        "references": [
+          {
+            "className": "GameManager",
+            "feature": "System",
+            "file": "Assets/Scripts/System/GameManager.cs"
+          },
+          {
+            "className": "CombatReadabilityFeedback",
+            "feature": "Combat",
+            "file": "Assets/Scripts/Combat/CombatReadabilityFeedback.cs"
+          }
+        ],
+        "dependsOn": [
+          "System",
+          "Combat"
+        ]
+      },
+      "Assets/Scripts/ShadowLevel.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "ShadowLevel"
+        ],
+        "methods": [
+          {
+            "visibility": "public",
+            "name": "GainExp"
+          },
+          {
+            "visibility": "private",
+            "name": "LevelUp"
+          }
+        ],
+        "todos": [],
+        "references": [],
+        "dependsOn": []
+      }
+    },
+    "dependsOn": [
+      "System",
+      "Combat"
+    ],
+    "details": {
+      "classUsage": [
+        {
+          "fromClass": "ShadowHealth",
+          "toClass": "GameManager",
+          "toFeature": "System",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "ShadowHealth",
+          "toClass": "CombatReadabilityFeedback",
+          "toFeature": "Combat",
+          "confidence": "Possible"
+        }
+      ],
+      "methodCalls": [
+        {
+          "fromMethod": "TakeDamage",
+          "toMethod": "OnDamaged",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "TakeDamage",
+          "toMethod": "Die",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Die",
+          "toMethod": "OnDeath",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "GainExp",
+          "toMethod": "LevelUp",
+          "confidence": "Possible"
+        }
+      ],
+      "publicApiUsage": [
+        {
+          "api": "TakeDamage",
+          "fromFeature": "Enemy",
+          "toFeature": "Shadow",
+          "className": "ShadowHealth",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "TakeDamage",
+          "fromFeature": "Player",
+          "toFeature": "Shadow",
+          "className": "ShadowHealth",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "TakeDamage",
+          "fromFeature": "Summon",
+          "toFeature": "Shadow",
+          "className": "ShadowHealth",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "TakeDamage",
+          "fromFeature": "ShadowHealth.cs",
+          "toFeature": "Shadow",
+          "className": "ShadowHealth",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "GainExp",
+          "fromFeature": "Enemy",
+          "toFeature": "Shadow",
+          "className": "ShadowLevel",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "GainExp",
+          "fromFeature": "Player",
+          "toFeature": "Shadow",
+          "className": "ShadowLevel",
+          "confidence": "Possible API usage"
+        }
+      ],
+      "circularDependencies": [],
+      "possibleUnusedApis": []
+    }
+  },
+  "insight": {
+    "classCount": 2,
+    "methodCount": 8,
+    "todoCount": 0,
+    "publicAPIs": [
+      "TakeDamage",
+      "GainExp"
+    ],
+    "knownReferences": [
+      {
+        "className": "GameManager",
+        "feature": "System",
+        "file": "Assets/Scripts/System/GameManager.cs"
+      },
+      {
+        "className": "CombatReadabilityFeedback",
+        "feature": "Combat",
+        "file": "Assets/Scripts/Combat/CombatReadabilityFeedback.cs"
+      }
+    ],
+    "riskHints": [
+      "Depends on System, Combat"
+    ]
+  },
+  "architecture": {
+    "outgoing": [
+      {
+        "from": "Shadow",
+        "to": "System",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "GameManager"
+        ]
+      },
+      {
+        "from": "Shadow",
+        "to": "Combat",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "CombatReadabilityFeedback"
+        ]
+      }
+    ],
+    "incoming": [
+      {
+        "from": "Enemy",
+        "to": "Shadow",
+        "type": "dependsOn",
+        "weight": 2,
+        "references": [
+          "ShadowHealth",
+          "ShadowLevel"
+        ]
+      },
+      {
+        "from": "Summon",
+        "to": "Shadow",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "ShadowLevel"
+        ]
+      }
+    ],
+    "risks": [],
+    "riskLevel": "Low",
+    "intelligence": {
+      "feature": "Shadow",
+      "hotspotLevel": "Low",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "Low",
+      "bottleneckRisk": "Low",
+      "circularArchitecture": [],
+      "refactorPriority": "Low",
+      "findings": [
+        "Shadow has both incoming and outgoing dependencies.",
+        "Shadow may be carrying multiple responsibilities."
+      ],
+      "suggestions": [],
+      "godObjectReasons": [],
+      "responsibilityReasons": [
+        "mixed incoming and outgoing dependencies"
+      ],
+      "bottleneckReasons": []
+    }
+  },
+  "summary": {
+    "feature": "Shadow",
+    "shortDescription": "Gameplay feature responsible for combat flow, progression, and summon flow.",
+    "responsibility": "Manages combat flow and attack resolution, level and progression state, and summon flow and active unit coordination.",
+    "mainPurpose": "Coordinates Combat Flow, Progression, and Summon Flow with System and Combat so gameplay actors can resolve offensive interactions.",
+    "mainAPIs": [
+      "TakeDamage",
+      "GainExp"
+    ],
+    "riskSummary": "Potential risk: Depends on System, Combat.",
+    "aiHint": "Keep changes focused and preserve existing feature boundaries."
+  },
+  "updatedAt": "2026-07-09T19:10:08.391Z",
+  "updated": "2026-07-09T19:10:08.391Z",
+  "instruction": "Use this compiled context to understand the Shadow system before suggesting code changes.",
+  "quality": {
+    "overallScore": 90,
+    "overallRating": "Excellent",
+    "aiReadiness": "Excellent",
+    "completeness": "Excellent",
+    "dependencyCoverage": "Good",
+    "architectureCoverage": "Good",
+    "summaryQuality": "Excellent",
+    "dependencyDetailConfidence": "Moderate",
+    "strengths": [
+      "Rich semantic summary",
+      "Clear responsibilities",
+      "Public APIs documented",
+      "Good dependency information",
+      "AI guidance available"
+    ],
+    "weaknesses": [
+      "Few commits",
+      "No TODO information",
+      "No design decisions",
+      "No architecture risks detected",
+      "Dependency details are mostly heuristic"
+    ]
+  }
+}

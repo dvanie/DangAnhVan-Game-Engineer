@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0",
+  "feature": "General",
+  "files": [
+    "Assets/Scenes/main.unity",
+    "Assets/Settings/UniversalRenderPipelineGlobalSettings.asset",
+    "Packages/packages-lock.json",
+    "Packages/manifest.json",
+    "ProjectSettings/PackageManagerSettings.asset",
+    "ProjectSettings/PhysicsCoreProjectSettings2D.asset",
+    "ProjectSettings/ProjectVersion.txt"
+  ],
+  "ownedFiles": [],
+  "integrationPoints": [],
+  "commits": [
+    {
+      "hash": "27ba053b84829d215e612ad3d60bed15ed589933",
+      "shortHash": "27ba053b",
+      "message": "Improve runtime debug panel readability",
+      "createdAt": "2026-07-03T17:04:48.946Z",
+      "time": "2026-07-03T17:04:48.946Z"
+    },
+    {
+      "hash": "22ff388d1697d2c6171c2fced9ad38689b8b523a",
+      "shortHash": "22ff388d",
+      "message": "Upgrade project to Unity 6.5",
+      "createdAt": "2026-07-06T15:49:46.441Z",
+      "time": "2026-07-06T15:49:46.441Z"
+    },
+    {
+      "hash": "17c3df525923a324f18f5899dc352b4da2624424",
+      "shortHash": "17c3df52",
+      "message": "Implement elite army stack and global summon interval",
+      "createdAt": "2026-07-06T19:41:02.263Z",
+      "time": "2026-07-06T19:41:02.263Z"
+    },
+    {
+      "hash": "5d3651cfa010ab50453dc244f58732626be6cf19",
+      "shortHash": "5d3651cf",
+      "message": "Add tutorial flow and first encounter polish",
+      "createdAt": "2026-07-07T17:20:48.515Z",
+      "time": "2026-07-07T17:20:48.515Z"
+    },
+    {
+      "hash": "a572ee0bd6bc2342c298b4ca6507c80a2ce9590a",
+      "shortHash": "a572ee0b",
+      "message": "Zone 1 Blockout v0.1",
+      "createdAt": "2026-07-08T08:39:10.347Z",
+      "time": "2026-07-08T08:39:10.347Z"
+    },
+    {
+      "hash": "23b62edb412b492f218c92267e9ea74c17d7bdb3",
+      "shortHash": "23b62edb",
+      "message": "Add Zone 1 story beat tutorial flow",
+      "createdAt": "2026-07-09T15:18:16.276Z",
+      "time": "2026-07-09T15:18:16.276Z"
+    }
+  ],
+  "decisions": [],
+  "dependencies": {
+    "schemaVersion": "1.0",
+    "generatedAt": "2026-07-09T19:10:07.977Z",
+    "files": {},
+    "dependsOn": [],
+    "details": {
+      "classUsage": [],
+      "methodCalls": [],
+      "publicApiUsage": [],
+      "circularDependencies": [],
+      "possibleUnusedApis": []
+    }
+  },
+  "insight": {
+    "classCount": 0,
+    "methodCount": 0,
+    "todoCount": 0,
+    "publicAPIs": [],
+    "knownReferences": [],
+    "riskHints": [
+      "No dependency analysis available"
+    ]
+  },
+  "architecture": {
+    "outgoing": [],
+    "incoming": [],
+    "risks": [],
+    "riskLevel": "Low",
+    "intelligence": {
+      "feature": "General",
+      "hotspotLevel": "Low",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "Low",
+      "bottleneckRisk": "Low",
+      "circularArchitecture": [],
+      "refactorPriority": "Low",
+      "findings": [
+        "General may be carrying multiple responsibilities."
+      ],
+      "suggestions": [],
+      "godObjectReasons": [],
+      "responsibilityReasons": [
+        "many files"
+      ],
+      "bottleneckReasons": []
+    }
+  },
+  "summary": {
+    "feature": "General",
+    "shortDescription": "General is a known project feature with limited analyzed code data.",
+    "responsibility": "Manages General gameplay behavior and related project logic.",
+    "mainPurpose": "Provides focused behavior that can be understood with minimal cross-feature context.",
+    "mainAPIs": [],
+    "riskSummary": "Potential risk: No dependency analysis available.",
+    "aiHint": "Keep changes focused and preserve existing feature boundaries."
+  },
+  "updatedAt": "2026-07-09T19:10:08.391Z",
+  "updated": "2026-07-09T19:10:08.391Z",
+  "instruction": "Use this compiled context to understand the General system before suggesting code changes.",
+  "quality": {
+    "overallScore": 72,
+    "overallRating": "Fair",
+    "aiReadiness": "Fair",
+    "completeness": "Good",
+    "dependencyCoverage": "Poor",
+    "architectureCoverage": "Fair",
+    "summaryQuality": "Excellent",
+    "dependencyDetailConfidence": "Unknown",
+    "strengths": [
+      "Rich semantic summary",
+      "Clear responsibilities",
+      "AI guidance available"
+    ],
+    "weaknesses": [
+      "No TODO information",
+      "No design decisions",
+      "No dependencies",
+      "No code insight",
+      "No architecture risks detected"
+    ]
+  }
+}

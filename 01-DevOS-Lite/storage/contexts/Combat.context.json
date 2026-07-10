@@ -1,0 +1,387 @@
+{
+  "schemaVersion": "1.0",
+  "feature": "Combat",
+  "files": [
+    "Assets/Scripts/Combat/CombatReadabilityFeedback.cs",
+    "Assets/Scripts/Combat/CombatReadabilityFeedback.cs.meta"
+  ],
+  "ownedFiles": [],
+  "integrationPoints": [],
+  "commits": [
+    {
+      "hash": "20c3003b33f2c60acfcac0b75aedc730d61aecc9",
+      "shortHash": "20c3003b",
+      "message": "Improve combat readability and fix duplicate soul drop",
+      "createdAt": "2026-07-06T15:49:36.264Z",
+      "time": "2026-07-06T15:49:36.264Z"
+    }
+  ],
+  "decisions": [],
+  "dependencies": {
+    "schemaVersion": "1.0",
+    "generatedAt": "2026-07-09T19:10:07.977Z",
+    "files": {
+      "Assets/Scripts/Combat/CombatReadabilityFeedback.cs": {
+        "namespace": null,
+        "usings": [
+          "System.Collections",
+          "UnityEngine"
+        ],
+        "classes": [
+          "CombatReadabilityFeedback"
+        ],
+        "methods": [
+          {
+            "visibility": "public",
+            "name": "GetOrAdd"
+          },
+          {
+            "visibility": "private",
+            "name": "Awake"
+          },
+          {
+            "visibility": "public",
+            "name": "PlayHit"
+          },
+          {
+            "visibility": "public",
+            "name": "PlayDeathThenDestroy"
+          },
+          {
+            "visibility": "public",
+            "name": "SetShadowFighting"
+          },
+          {
+            "visibility": "private",
+            "name": "HitRoutine"
+          },
+          {
+            "visibility": "private",
+            "name": "DeathRoutine"
+          },
+          {
+            "visibility": "private",
+            "name": "ApplyCurrentColor"
+          },
+          {
+            "visibility": "private",
+            "name": "CacheRenderers"
+          },
+          {
+            "visibility": "private",
+            "name": "SetColor"
+          },
+          {
+            "visibility": "private",
+            "name": "RestoreOriginalColors"
+          },
+          {
+            "visibility": "private",
+            "name": "GetMaterialColor"
+          },
+          {
+            "visibility": "private",
+            "name": "SetMaterialColor"
+          }
+        ],
+        "todos": [],
+        "references": [],
+        "dependsOn": []
+      }
+    },
+    "dependsOn": [],
+    "details": {
+      "classUsage": [],
+      "methodCalls": [
+        {
+          "fromMethod": "Awake",
+          "toMethod": "CacheRenderers",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "PlayHit",
+          "toMethod": "HitRoutine",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "PlayDeathThenDestroy",
+          "toMethod": "DeathRoutine",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "SetShadowFighting",
+          "toMethod": "ApplyCurrentColor",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "HitRoutine",
+          "toMethod": "ApplyCurrentColor",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "HitRoutine",
+          "toMethod": "SetColor",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "DeathRoutine",
+          "toMethod": "SetColor",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "ApplyCurrentColor",
+          "toMethod": "SetColor",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "ApplyCurrentColor",
+          "toMethod": "RestoreOriginalColors",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "CacheRenderers",
+          "toMethod": "GetMaterialColor",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "SetColor",
+          "toMethod": "SetMaterialColor",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "RestoreOriginalColors",
+          "toMethod": "SetMaterialColor",
+          "confidence": "Possible"
+        }
+      ],
+      "publicApiUsage": [
+        {
+          "api": "GetOrAdd",
+          "fromFeature": "Enemy",
+          "toFeature": "Combat",
+          "className": "CombatReadabilityFeedback",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "GetOrAdd",
+          "fromFeature": "Player",
+          "toFeature": "Combat",
+          "className": "CombatReadabilityFeedback",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "GetOrAdd",
+          "fromFeature": "Shadow",
+          "toFeature": "Combat",
+          "className": "CombatReadabilityFeedback",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "GetOrAdd",
+          "fromFeature": "Summon",
+          "toFeature": "Combat",
+          "className": "CombatReadabilityFeedback",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "GetOrAdd",
+          "fromFeature": "ShadowHealth.cs",
+          "toFeature": "Combat",
+          "className": "CombatReadabilityFeedback",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "PlayHit",
+          "fromFeature": "Enemy",
+          "toFeature": "Combat",
+          "className": "CombatReadabilityFeedback",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "PlayHit",
+          "fromFeature": "Player",
+          "toFeature": "Combat",
+          "className": "CombatReadabilityFeedback",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "PlayHit",
+          "fromFeature": "Shadow",
+          "toFeature": "Combat",
+          "className": "CombatReadabilityFeedback",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "PlayHit",
+          "fromFeature": "ShadowHealth.cs",
+          "toFeature": "Combat",
+          "className": "CombatReadabilityFeedback",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "PlayDeathThenDestroy",
+          "fromFeature": "Enemy",
+          "toFeature": "Combat",
+          "className": "CombatReadabilityFeedback",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "PlayDeathThenDestroy",
+          "fromFeature": "Player",
+          "toFeature": "Combat",
+          "className": "CombatReadabilityFeedback",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "PlayDeathThenDestroy",
+          "fromFeature": "Shadow",
+          "toFeature": "Combat",
+          "className": "CombatReadabilityFeedback",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "PlayDeathThenDestroy",
+          "fromFeature": "ShadowHealth.cs",
+          "toFeature": "Combat",
+          "className": "CombatReadabilityFeedback",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "SetShadowFighting",
+          "fromFeature": "Summon",
+          "toFeature": "Combat",
+          "className": "CombatReadabilityFeedback",
+          "confidence": "Possible API usage"
+        }
+      ],
+      "circularDependencies": [],
+      "possibleUnusedApis": []
+    }
+  },
+  "insight": {
+    "classCount": 1,
+    "methodCount": 13,
+    "todoCount": 0,
+    "publicAPIs": [
+      "GetOrAdd",
+      "PlayHit",
+      "PlayDeathThenDestroy",
+      "SetShadowFighting"
+    ],
+    "knownReferences": [],
+    "riskHints": []
+  },
+  "architecture": {
+    "outgoing": [],
+    "incoming": [
+      {
+        "from": "Enemy",
+        "to": "Combat",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "CombatReadabilityFeedback"
+        ]
+      },
+      {
+        "from": "Player",
+        "to": "Combat",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "CombatReadabilityFeedback"
+        ]
+      },
+      {
+        "from": "Shadow",
+        "to": "Combat",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "CombatReadabilityFeedback"
+        ]
+      },
+      {
+        "from": "Summon",
+        "to": "Combat",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "CombatReadabilityFeedback"
+        ]
+      },
+      {
+        "from": "ShadowHealth.cs",
+        "to": "Combat",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "CombatReadabilityFeedback"
+        ]
+      }
+    ],
+    "risks": [],
+    "riskLevel": "Low",
+    "intelligence": {
+      "feature": "Combat",
+      "hotspotLevel": "Low",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "Low",
+      "bottleneckRisk": "Low",
+      "circularArchitecture": [],
+      "refactorPriority": "Low",
+      "findings": [
+        "Combat may act as an architectural bottleneck."
+      ],
+      "suggestions": [
+        "Changing this feature may affect multiple systems."
+      ],
+      "godObjectReasons": [],
+      "responsibilityReasons": [],
+      "bottleneckReasons": [
+        "many incoming dependencies"
+      ]
+    }
+  },
+  "summary": {
+    "feature": "Combat",
+    "shortDescription": "Gameplay feature responsible for combat flow, summon flow, and enemy behaviour.",
+    "responsibility": "Manages combat flow and attack resolution, summon flow and active unit coordination, and enemy behaviour and combat interactions.",
+    "mainPurpose": "Provides the gameplay flow where gameplay actors can resolve offensive interactions.",
+    "mainAPIs": [
+      "GetOrAdd",
+      "PlayHit",
+      "PlayDeathThenDestroy",
+      "SetShadowFighting"
+    ],
+    "riskSummary": "No major architectural risks detected.",
+    "aiHint": "Changing public APIs may affect multiple gameplay systems."
+  },
+  "updatedAt": "2026-07-09T19:10:08.391Z",
+  "updated": "2026-07-09T19:10:08.391Z",
+  "instruction": "Use this compiled context to understand the Combat system before suggesting code changes.",
+  "quality": {
+    "overallScore": 90,
+    "overallRating": "Excellent",
+    "aiReadiness": "Excellent",
+    "completeness": "Excellent",
+    "dependencyCoverage": "Good",
+    "architectureCoverage": "Fair",
+    "summaryQuality": "Excellent",
+    "dependencyDetailConfidence": "Moderate",
+    "strengths": [
+      "Rich semantic summary",
+      "Clear responsibilities",
+      "Public APIs documented",
+      "Good dependency information",
+      "AI guidance available"
+    ],
+    "weaknesses": [
+      "Few commits",
+      "No TODO information",
+      "No design decisions",
+      "No architecture risks detected",
+      "Dependency details are mostly heuristic"
+    ]
+  }
+}

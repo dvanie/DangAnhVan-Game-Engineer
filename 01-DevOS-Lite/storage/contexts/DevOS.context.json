@@ -1,0 +1,190 @@
+{
+  "schemaVersion": "1.0",
+  "feature": "DevOS",
+  "files": [
+    "devos/docs/unity-playmode-checklist.md",
+    "devos/CODEX_WORKFLOW.md",
+    "devos/core/engines/review.engine.js",
+    "devos/index.js",
+    "devos/core/engines/ask.engine.js",
+    "devos/core/engines/recipe.engine.js",
+    "devos/core/engines/task.engine.js",
+    "devos/core/engines/compiler.engine.js",
+    "devos/core/models/owned-files.model.js",
+    "devos/core/pipelines/context.pipeline.js",
+    "devos/core/engines/risk.engine.js",
+    "devos/core/engines/report.engine.js",
+    "devos/core/engines/feature-intelligence.engine.js",
+    "devos/core/engines/impact.engine.js"
+  ],
+  "ownedFiles": [],
+  "integrationPoints": [],
+  "commits": [
+    {
+      "hash": "27ba053b84829d215e612ad3d60bed15ed589933",
+      "shortHash": "27ba053b",
+      "message": "Improve runtime debug panel readability",
+      "createdAt": "2026-07-03T17:04:48.946Z",
+      "time": "2026-07-03T17:04:48.946Z"
+    },
+    {
+      "hash": "17c3df525923a324f18f5899dc352b4da2624424",
+      "shortHash": "17c3df52",
+      "message": "Implement elite army stack and global summon interval",
+      "createdAt": "2026-07-06T19:41:02.263Z",
+      "time": "2026-07-06T19:41:02.263Z"
+    },
+    {
+      "hash": "844789f49a34bbf340a78671f75ccf3d9b71f11f",
+      "shortHash": "844789f4",
+      "message": "tutorial basic playable complete",
+      "createdAt": "2026-07-08T11:31:52.953Z",
+      "time": "2026-07-08T11:31:52.953Z"
+    },
+    {
+      "hash": "6f87c15295871d906a00972765926bc35d35bedd",
+      "shortHash": "6f87c152",
+      "message": "Upgrade DevOS review with diff mode",
+      "createdAt": "2026-07-08T12:56:16.585Z",
+      "time": "2026-07-08T12:56:16.585Z"
+    },
+    {
+      "hash": "187b525f9792362bffa31590a0d862f6037ed7ec",
+      "shortHash": "187b525f",
+      "message": "Add DevOS recipe engine for ask guidance",
+      "createdAt": "2026-07-08T13:03:27.741Z",
+      "time": "2026-07-08T13:03:27.741Z"
+    },
+    {
+      "hash": "64531adff636f67c4777076400ef328744b9f73c",
+      "shortHash": "64531adf",
+      "message": "Add DevOS task size modes",
+      "createdAt": "2026-07-08T13:13:42.856Z",
+      "time": "2026-07-08T13:13:42.856Z"
+    },
+    {
+      "hash": "baac648f51bbdfa1e4d9938e810787000387fd06",
+      "shortHash": "baac648f",
+      "message": "Add owned files support to DevOS context",
+      "createdAt": "2026-07-08T13:24:00.265Z",
+      "time": "2026-07-08T13:24:00.265Z"
+    },
+    {
+      "hash": "bdebd1db177f58cc20b1b6edccd3999252a69d75",
+      "shortHash": "bdebd1db",
+      "message": "Add integration points to DevOS feature context",
+      "createdAt": "2026-07-08T13:32:55.508Z",
+      "time": "2026-07-08T13:32:55.508Z"
+    },
+    {
+      "hash": "bbd03d896d841649b6eaa64de2716244d70a585e",
+      "shortHash": "bbd03d89",
+      "message": "Add DevOS feature risk engine",
+      "createdAt": "2026-07-08T13:48:59.090Z",
+      "time": "2026-07-08T13:48:59.090Z"
+    },
+    {
+      "hash": "a1d5f4348a69d7268ea4b94167096ef70e977247",
+      "shortHash": "a1d5f434",
+      "message": "Add DevOS task report engine",
+      "createdAt": "2026-07-08T14:21:42.573Z",
+      "time": "2026-07-08T14:21:42.573Z"
+    },
+    {
+      "hash": "38220a21b11079011ed435c8128009d700c05933",
+      "shortHash": "38220a21",
+      "message": "Add DevOS feature intelligence profiles",
+      "createdAt": "2026-07-08T14:36:12.998Z",
+      "time": "2026-07-08T14:36:12.998Z"
+    },
+    {
+      "hash": "439cdf3ddde83c3c096403b56435859cc8120c41",
+      "shortHash": "439cdf3d",
+      "message": "Improve DevOS workflow support",
+      "createdAt": "2026-07-08T16:17:32.435Z",
+      "time": "2026-07-08T16:17:32.435Z"
+    }
+  ],
+  "decisions": [],
+  "dependencies": {
+    "schemaVersion": "1.0",
+    "generatedAt": "2026-07-09T19:10:07.977Z",
+    "files": {},
+    "dependsOn": [],
+    "details": {
+      "classUsage": [],
+      "methodCalls": [],
+      "publicApiUsage": [],
+      "circularDependencies": [],
+      "possibleUnusedApis": []
+    }
+  },
+  "insight": {
+    "classCount": 0,
+    "methodCount": 0,
+    "todoCount": 0,
+    "publicAPIs": [],
+    "knownReferences": [],
+    "riskHints": [
+      "No dependency analysis available"
+    ]
+  },
+  "architecture": {
+    "outgoing": [],
+    "incoming": [],
+    "risks": [],
+    "riskLevel": "Low",
+    "intelligence": {
+      "feature": "DevOS",
+      "hotspotLevel": "Low",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "Low",
+      "bottleneckRisk": "Low",
+      "circularArchitecture": [],
+      "refactorPriority": "Low",
+      "findings": [
+        "DevOS may be carrying multiple responsibilities."
+      ],
+      "suggestions": [],
+      "godObjectReasons": [],
+      "responsibilityReasons": [
+        "many files"
+      ],
+      "bottleneckReasons": []
+    }
+  },
+  "summary": {
+    "feature": "DevOS",
+    "shortDescription": "DevOS is internal project intelligence tooling, not a gameplay feature.",
+    "responsibility": "Maintains project memory, analysis outputs, and AI-ready context tooling.",
+    "mainPurpose": "Builds deterministic project intelligence that helps humans and AI understand the project faster.",
+    "mainAPIs": [],
+    "riskSummary": "Potential risk: No dependency analysis available.",
+    "aiHint": "When modifying DevOS, preserve deterministic local analysis and avoid adding AI-agent behavior."
+  },
+  "updatedAt": "2026-07-09T19:10:08.391Z",
+  "updated": "2026-07-09T19:10:08.391Z",
+  "instruction": "Use this compiled context to understand the DevOS system before suggesting code changes.",
+  "quality": {
+    "overallScore": 72,
+    "overallRating": "Fair",
+    "aiReadiness": "Fair",
+    "completeness": "Good",
+    "dependencyCoverage": "Poor",
+    "architectureCoverage": "Fair",
+    "summaryQuality": "Excellent",
+    "dependencyDetailConfidence": "Unknown",
+    "strengths": [
+      "Rich semantic summary",
+      "Clear responsibilities",
+      "AI guidance available"
+    ],
+    "weaknesses": [
+      "No TODO information",
+      "No design decisions",
+      "No dependencies",
+      "No code insight",
+      "No architecture risks detected"
+    ]
+  }
+}

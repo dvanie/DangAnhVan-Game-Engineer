@@ -1,0 +1,631 @@
+{
+  "schemaVersion": "1.0",
+  "feature": "Soul",
+  "files": [
+    "Assets/Scripts/Soul/ShadowClass.cs",
+    "Assets/Scripts/Soul/SoulCollectionEntry.cs",
+    "Assets/Scripts/Soul/SoulData.cs",
+    "Assets/Scripts/Soul/SoulObject.cs",
+    "Assets/Scripts/Soul/SoulPickup.cs",
+    "Assets/Scripts/Soul/SoulRank.cs",
+    "Assets/Scripts/Soul/SoulStat.cs",
+    "Assets/Scripts/Soul/SoulState.cs",
+    "Assets/Scripts/Soul/SoulType.cs"
+  ],
+  "ownedFiles": [
+    "Assets/Scripts/Soul/"
+  ],
+  "integrationPoints": [
+    {
+      "feature": "Enemy",
+      "reason": "enemy defeat may create soul drops",
+      "files": [
+        "Assets/Scripts/Enemy/EnemyHealth.cs"
+      ]
+    },
+    {
+      "feature": "Collection",
+      "reason": "collected souls are stored and synced with collection state",
+      "files": [
+        "Assets/Scripts/Collection/"
+      ]
+    },
+    {
+      "feature": "Summon",
+      "reason": "soul type/rank becomes summonable identity",
+      "files": [
+        "Assets/Scripts/Summon/"
+      ]
+    }
+  ],
+  "commits": [
+    {
+      "hash": "5d3651cfa010ab50453dc244f58732626be6cf19",
+      "shortHash": "5d3651cf",
+      "message": "Add tutorial flow and first encounter polish",
+      "createdAt": "2026-07-07T17:20:48.515Z",
+      "time": "2026-07-07T17:20:48.515Z"
+    }
+  ],
+  "decisions": [],
+  "dependencies": {
+    "schemaVersion": "1.0",
+    "generatedAt": "2026-07-09T19:10:07.977Z",
+    "files": {
+      "Assets/Scripts/Soul/ShadowClass.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [],
+        "methods": [],
+        "todos": [],
+        "references": [],
+        "dependsOn": []
+      },
+      "Assets/Scripts/Soul/SoulCollectionEntry.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "SoulCollectionEntry"
+        ],
+        "methods": [
+          {
+            "visibility": "public",
+            "name": "GetTotalElite"
+          },
+          {
+            "visibility": "public",
+            "name": "GetAvailableEliteForCombat"
+          },
+          {
+            "visibility": "public",
+            "name": "CanCollect"
+          },
+          {
+            "visibility": "public",
+            "name": "IsComplete"
+          }
+        ],
+        "todos": [],
+        "references": [],
+        "dependsOn": []
+      },
+      "Assets/Scripts/Soul/SoulData.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "SoulData"
+        ],
+        "methods": [],
+        "todos": [],
+        "references": [],
+        "dependsOn": []
+      },
+      "Assets/Scripts/Soul/SoulObject.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine",
+          "TMPro"
+        ],
+        "classes": [
+          "SoulObject"
+        ],
+        "methods": [
+          {
+            "visibility": "private",
+            "name": "Start"
+          },
+          {
+            "visibility": "private",
+            "name": "Update"
+          },
+          {
+            "visibility": "private",
+            "name": "HandleLifetime"
+          },
+          {
+            "visibility": "private",
+            "name": "HandleAutoCollect"
+          },
+          {
+            "visibility": "private",
+            "name": "HandleManualExtract"
+          },
+          {
+            "visibility": "public",
+            "name": "Extract"
+          },
+          {
+            "visibility": "public",
+            "name": "StartVacuum"
+          },
+          {
+            "visibility": "private",
+            "name": "Expire"
+          }
+        ],
+        "todos": [],
+        "references": [
+          {
+            "className": "GameManager",
+            "feature": "System",
+            "file": "Assets/Scripts/System/GameManager.cs"
+          }
+        ],
+        "dependsOn": [
+          "System"
+        ]
+      },
+      "Assets/Scripts/Soul/SoulPickup.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "SoulPickup"
+        ],
+        "methods": [
+          {
+            "visibility": "private",
+            "name": "Start"
+          },
+          {
+            "visibility": "private",
+            "name": "OnTriggerEnter"
+          }
+        ],
+        "todos": [],
+        "references": [
+          {
+            "className": "SoulObject",
+            "feature": "Soul",
+            "file": "Assets/Scripts/Soul/SoulObject.cs"
+          },
+          {
+            "className": "GameManager",
+            "feature": "System",
+            "file": "Assets/Scripts/System/GameManager.cs"
+          }
+        ],
+        "dependsOn": [
+          "System"
+        ]
+      },
+      "Assets/Scripts/Soul/SoulRank.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [],
+        "methods": [],
+        "todos": [],
+        "references": [],
+        "dependsOn": []
+      },
+      "Assets/Scripts/Soul/SoulStat.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "SoulStats"
+        ],
+        "methods": [
+          {
+            "visibility": "private",
+            "name": "Awake"
+          },
+          {
+            "visibility": "private",
+            "name": "Start"
+          },
+          {
+            "visibility": "public",
+            "name": "Initialize"
+          },
+          {
+            "visibility": "private",
+            "name": "ApplyStats"
+          },
+          {
+            "visibility": "private",
+            "name": "ApplyCombatStats"
+          },
+          {
+            "visibility": "private",
+            "name": "ApplyIdentity"
+          }
+        ],
+        "todos": [],
+        "references": [
+          {
+            "className": "SoulData",
+            "feature": "Soul",
+            "file": "Assets/Scripts/Soul/SoulData.cs"
+          },
+          {
+            "className": "SummonCombat",
+            "feature": "Summon",
+            "file": "Assets/Scripts/Summon/SummonCombat.cs"
+          },
+          {
+            "className": "GameManager",
+            "feature": "System",
+            "file": "Assets/Scripts/System/GameManager.cs"
+          }
+        ],
+        "dependsOn": [
+          "Summon",
+          "System"
+        ]
+      },
+      "Assets/Scripts/Soul/SoulState.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [],
+        "methods": [],
+        "todos": [],
+        "references": [],
+        "dependsOn": []
+      },
+      "Assets/Scripts/Soul/SoulType.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [],
+        "methods": [],
+        "todos": [],
+        "references": [],
+        "dependsOn": []
+      }
+    },
+    "dependsOn": [
+      "System",
+      "Summon"
+    ],
+    "details": {
+      "classUsage": [
+        {
+          "fromClass": "SoulObject",
+          "toClass": "GameManager",
+          "toFeature": "System",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "SoulPickup",
+          "toClass": "SoulObject",
+          "toFeature": "Soul",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "SoulPickup",
+          "toClass": "GameManager",
+          "toFeature": "System",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "SoulStats",
+          "toClass": "SoulData",
+          "toFeature": "Soul",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "SoulStats",
+          "toClass": "SummonCombat",
+          "toFeature": "Summon",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "SoulStats",
+          "toClass": "GameManager",
+          "toFeature": "System",
+          "confidence": "Possible"
+        }
+      ],
+      "methodCalls": [
+        {
+          "fromMethod": "Update",
+          "toMethod": "HandleLifetime",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Update",
+          "toMethod": "HandleAutoCollect",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Update",
+          "toMethod": "HandleManualExtract",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "HandleLifetime",
+          "toMethod": "Expire",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "HandleManualExtract",
+          "toMethod": "Extract",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Start",
+          "toMethod": "ApplyStats",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Initialize",
+          "toMethod": "ApplyStats",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "ApplyStats",
+          "toMethod": "ApplyCombatStats",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "ApplyStats",
+          "toMethod": "ApplyIdentity",
+          "confidence": "Possible"
+        }
+      ],
+      "publicApiUsage": [
+        {
+          "api": "CanCollect",
+          "fromFeature": "System",
+          "toFeature": "Soul",
+          "className": "SoulCollectionEntry",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "Initialize",
+          "fromFeature": "System",
+          "toFeature": "Soul",
+          "className": "SoulStats",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "Initialize",
+          "fromFeature": "Tutorial",
+          "toFeature": "Soul",
+          "className": "SoulStats",
+          "confidence": "Possible API usage"
+        }
+      ],
+      "circularDependencies": [
+        {
+          "from": "Soul",
+          "to": "System",
+          "confidence": "Possible"
+        },
+        {
+          "from": "Soul",
+          "to": "Summon",
+          "confidence": "Possible"
+        }
+      ],
+      "possibleUnusedApis": [
+        {
+          "api": "GetTotalElite",
+          "className": "SoulCollectionEntry",
+          "confidence": "Possible unused public API, not referenced in scanned code"
+        },
+        {
+          "api": "GetAvailableEliteForCombat",
+          "className": "SoulCollectionEntry",
+          "confidence": "Possible unused public API, not referenced in scanned code"
+        },
+        {
+          "api": "IsComplete",
+          "className": "SoulCollectionEntry",
+          "confidence": "Possible unused public API, not referenced in scanned code"
+        }
+      ]
+    }
+  },
+  "insight": {
+    "classCount": 5,
+    "methodCount": 20,
+    "todoCount": 0,
+    "publicAPIs": [
+      "GetTotalElite",
+      "GetAvailableEliteForCombat",
+      "CanCollect",
+      "IsComplete",
+      "Extract",
+      "StartVacuum",
+      "Initialize"
+    ],
+    "knownReferences": [
+      {
+        "className": "GameManager",
+        "feature": "System",
+        "file": "Assets/Scripts/System/GameManager.cs"
+      },
+      {
+        "className": "SoulObject",
+        "feature": "Soul",
+        "file": "Assets/Scripts/Soul/SoulObject.cs"
+      },
+      {
+        "className": "SoulData",
+        "feature": "Soul",
+        "file": "Assets/Scripts/Soul/SoulData.cs"
+      },
+      {
+        "className": "SummonCombat",
+        "feature": "Summon",
+        "file": "Assets/Scripts/Summon/SummonCombat.cs"
+      }
+    ],
+    "riskHints": [
+      "Depends on System, Summon"
+    ]
+  },
+  "architecture": {
+    "outgoing": [
+      {
+        "from": "Soul",
+        "to": "System",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "GameManager"
+        ]
+      },
+      {
+        "from": "Soul",
+        "to": "Summon",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "SummonCombat"
+        ]
+      }
+    ],
+    "incoming": [
+      {
+        "from": "Army",
+        "to": "Soul",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "SoulCollectionEntry"
+        ]
+      },
+      {
+        "from": "Enemy",
+        "to": "Soul",
+        "type": "dependsOn",
+        "weight": 2,
+        "references": [
+          "SoulObject",
+          "SoulPickup"
+        ]
+      },
+      {
+        "from": "Summon",
+        "to": "Soul",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "SoulStats"
+        ]
+      },
+      {
+        "from": "System",
+        "to": "Soul",
+        "type": "dependsOn",
+        "weight": 3,
+        "references": [
+          "SoulCollectionEntry",
+          "SoulData",
+          "SoulStats"
+        ]
+      },
+      {
+        "from": "Tutorial",
+        "to": "Soul",
+        "type": "dependsOn",
+        "weight": 3,
+        "references": [
+          "SoulObject",
+          "SoulPickup",
+          "SoulStats"
+        ]
+      }
+    ],
+    "risks": [],
+    "riskLevel": "Low",
+    "intelligence": {
+      "feature": "Soul",
+      "hotspotLevel": "Medium",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "Medium",
+      "bottleneckRisk": "Low",
+      "circularArchitecture": [
+        {
+          "from": "Soul",
+          "to": "System",
+          "confidence": "Possible"
+        },
+        {
+          "from": "Soul",
+          "to": "Summon",
+          "confidence": "Possible"
+        }
+      ],
+      "refactorPriority": "Medium",
+      "findings": [
+        "Soul has both incoming and outgoing dependencies.",
+        "Soul participates in possible circular dependencies with System, Summon.",
+        "Soul may be carrying multiple responsibilities.",
+        "Soul may act as an architectural bottleneck."
+      ],
+      "suggestions": [
+        "Changing this feature may affect multiple systems.",
+        "Consider reducing bidirectional dependencies over time."
+      ],
+      "godObjectReasons": [],
+      "responsibilityReasons": [
+        "mixed incoming and outgoing dependencies",
+        "many files"
+      ],
+      "bottleneckReasons": [
+        "many incoming dependencies"
+      ]
+    }
+  },
+  "summary": {
+    "feature": "Soul",
+    "shortDescription": "Gameplay feature responsible for soul collection, combat flow, and summon flow.",
+    "responsibility": "Manages soul collection and access, combat flow and attack resolution, and summon flow and active unit coordination.",
+    "mainPurpose": "Coordinates Soul Collection, Combat Flow, and Summon Flow with System and Summon so collected shadows can be tracked and reused in gameplay.",
+    "mainAPIs": [
+      "GetTotalElite",
+      "GetAvailableEliteForCombat",
+      "CanCollect",
+      "IsComplete",
+      "Extract",
+      "StartVacuum",
+      "Initialize"
+    ],
+    "riskSummary": "Potential risk: Depends on System, Summon.",
+    "aiHint": "Changing public APIs may affect multiple gameplay systems."
+  },
+  "updatedAt": "2026-07-09T19:10:08.391Z",
+  "updated": "2026-07-09T19:10:08.391Z",
+  "instruction": "Use this compiled context to understand the Soul system before suggesting code changes.",
+  "quality": {
+    "overallScore": 90,
+    "overallRating": "Excellent",
+    "aiReadiness": "Excellent",
+    "completeness": "Excellent",
+    "dependencyCoverage": "Good",
+    "architectureCoverage": "Good",
+    "summaryQuality": "Excellent",
+    "dependencyDetailConfidence": "Moderate",
+    "strengths": [
+      "Rich semantic summary",
+      "Clear responsibilities",
+      "Public APIs documented",
+      "Good dependency information",
+      "AI guidance available"
+    ],
+    "weaknesses": [
+      "Few commits",
+      "No TODO information",
+      "No design decisions",
+      "No architecture risks detected",
+      "Dependency details are mostly heuristic"
+    ]
+  }
+}

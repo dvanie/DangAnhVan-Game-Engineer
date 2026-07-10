@@ -1,0 +1,1880 @@
+{
+  "schemaVersion": "1.0",
+  "feature": "Tutorial",
+  "files": [
+    "Assets/Scripts/Tutorial/TutorialEncounterMarker.cs",
+    "Assets/Scripts/Tutorial/TutorialEncounterMarker.cs.meta",
+    "Assets/Scripts/Tutorial/TutorialHintTrigger.cs",
+    "Assets/Scripts/Tutorial/TutorialHintTrigger.cs.meta",
+    "Assets/Scripts/Tutorial/TutorialObjectiveUI.cs",
+    "Assets/Scripts/Tutorial/TutorialObjectiveUI.cs.meta",
+    "Assets/Scripts/Tutorial/TutorialQuestPlaceholder.cs",
+    "Assets/Scripts/Tutorial/TutorialQuestPlaceholder.cs.meta",
+    "Assets/Scripts/Tutorial/TutorialEncounterEnemyTracker.cs",
+    "Assets/Scripts/Tutorial/TutorialEncounterEnemyTracker.cs.meta",
+    "Assets/Scripts/Tutorial/TutorialCompletionDropTracker.cs",
+    "Assets/Scripts/Tutorial/TutorialStepController.cs",
+    "Assets/Scripts/Tutorial/TutorialCompletionDropTracker.cs.meta",
+    "Assets/Scripts/Tutorial/TutorialStepController.cs.meta",
+    "Assets/Scripts/Tutorial/TutorialAwakenStorySequence.cs",
+    "Assets/Scripts/Tutorial/TutorialAwakenStoryTrigger.cs",
+    "Assets/Scripts/Tutorial/TutorialStoryBeatFlow.cs",
+    "Assets/Scripts/Tutorial/TutorialAwakenStorySequence.cs.meta",
+    "Assets/Scripts/Tutorial/TutorialAwakenStoryTrigger.cs.meta",
+    "Assets/Scripts/Tutorial/TutorialStoryBeatFlow.cs.meta"
+  ],
+  "ownedFiles": [
+    "Assets/Scripts/Tutorial/TutorialStepController.cs",
+    "Assets/Scripts/Tutorial/TutorialHintTrigger.cs",
+    "Assets/Scripts/Tutorial/TutorialQuestPlaceholder.cs",
+    "Assets/Scripts/Tutorial/TutorialEncounterMarker.cs",
+    "Assets/Scripts/Tutorial/TutorialCompletionDropTracker.cs",
+    "Assets/Scripts/Tutorial/TutorialObjectiveUI.cs"
+  ],
+  "integrationPoints": [
+    {
+      "feature": "Player",
+      "reason": "movement, run, and dash tutorial gates",
+      "files": [
+        "Assets/Scripts/Player/PlayerMovement.cs"
+      ]
+    },
+    {
+      "feature": "Enemy",
+      "reason": "tutorial encounter completion through enemy defeat",
+      "files": [
+        "Assets/Scripts/Enemy/EnemyHealth.cs"
+      ]
+    },
+    {
+      "feature": "Soul",
+      "reason": "soul drop, pickup, and extraction tutorial completion",
+      "files": [
+        "Assets/Scripts/Soul/"
+      ]
+    }
+  ],
+  "commits": [
+    {
+      "hash": "5d3651cfa010ab50453dc244f58732626be6cf19",
+      "shortHash": "5d3651cf",
+      "message": "Add tutorial flow and first encounter polish",
+      "createdAt": "2026-07-07T17:20:48.515Z",
+      "time": "2026-07-07T17:20:48.515Z"
+    },
+    {
+      "hash": "0db56f90cf071a85020764a8a21c93c68d4aeb03",
+      "shortHash": "0db56f90",
+      "message": "Add ground run and dash movement",
+      "createdAt": "2026-07-07T17:52:45.703Z",
+      "time": "2026-07-07T17:52:45.703Z"
+    },
+    {
+      "hash": "a572ee0bd6bc2342c298b4ca6507c80a2ce9590a",
+      "shortHash": "a572ee0b",
+      "message": "Zone 1 Blockout v0.1",
+      "createdAt": "2026-07-08T08:39:10.347Z",
+      "time": "2026-07-08T08:39:10.347Z"
+    },
+    {
+      "hash": "75c4cb75e54318069d5ae4843d3b96d06ffa7430",
+      "shortHash": "75c4cb75",
+      "message": "Improve tutorial encounter reward flow",
+      "createdAt": "2026-07-08T09:00:45.040Z",
+      "time": "2026-07-08T09:00:45.040Z"
+    },
+    {
+      "hash": "844789f49a34bbf340a78671f75ccf3d9b71f11f",
+      "shortHash": "844789f4",
+      "message": "tutorial basic playable complete",
+      "createdAt": "2026-07-08T11:31:52.953Z",
+      "time": "2026-07-08T11:31:52.953Z"
+    },
+    {
+      "hash": "71f2980d445a92fb1d35d6b347e0d141caf1df5f",
+      "shortHash": "71f2980d",
+      "message": "Improve tutorial path pacing and post-fade objective",
+      "createdAt": "2026-07-08T18:15:44.293Z",
+      "time": "2026-07-08T18:15:44.293Z"
+    },
+    {
+      "hash": "23b62edb412b492f218c92267e9ea74c17d7bdb3",
+      "shortHash": "23b62edb",
+      "message": "Add Zone 1 story beat tutorial flow",
+      "createdAt": "2026-07-09T15:18:16.276Z",
+      "time": "2026-07-09T15:18:16.276Z"
+    }
+  ],
+  "decisions": [],
+  "dependencies": {
+    "schemaVersion": "1.0",
+    "generatedAt": "2026-07-09T19:10:07.977Z",
+    "files": {
+      "Assets/Scripts/Tutorial/TutorialEncounterMarker.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "TutorialEncounterMarker"
+        ],
+        "methods": [
+          {
+            "visibility": "public",
+            "name": "Configure"
+          },
+          {
+            "visibility": "public",
+            "name": "Configure"
+          },
+          {
+            "visibility": "public",
+            "name": "NotifyEnemyDefeated"
+          },
+          {
+            "visibility": "private",
+            "name": "Reset"
+          },
+          {
+            "visibility": "private",
+            "name": "OnTriggerEnter"
+          },
+          {
+            "visibility": "private",
+            "name": "OnTriggerStay"
+          },
+          {
+            "visibility": "private",
+            "name": "TryStartEncounter"
+          },
+          {
+            "visibility": "private",
+            "name": "SpawnEncounter"
+          },
+          {
+            "visibility": "private",
+            "name": "SpawnCompletionDrop"
+          }
+        ],
+        "todos": [],
+        "references": [
+          {
+            "className": "EnemyHealth",
+            "feature": "Enemy",
+            "file": "Assets/Scripts/Enemy/EnemyHealth.cs"
+          },
+          {
+            "className": "EnemySoulDrop",
+            "feature": "Enemy",
+            "file": "Assets/Scripts/Enemy/EnemySoulDrop.cs"
+          },
+          {
+            "className": "SoulObject",
+            "feature": "Soul",
+            "file": "Assets/Scripts/Soul/SoulObject.cs"
+          },
+          {
+            "className": "SoulPickup",
+            "feature": "Soul",
+            "file": "Assets/Scripts/Soul/SoulPickup.cs"
+          },
+          {
+            "className": "TutorialObjectiveUI",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialObjectiveUI.cs"
+          },
+          {
+            "className": "TutorialEncounterEnemyTracker",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialEncounterEnemyTracker.cs"
+          },
+          {
+            "className": "TutorialCompletionDropTracker",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialCompletionDropTracker.cs"
+          },
+          {
+            "className": "TutorialStepController",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialStepController.cs"
+          }
+        ],
+        "dependsOn": [
+          "Enemy",
+          "Soul"
+        ]
+      },
+      "Assets/Scripts/Tutorial/TutorialHintTrigger.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "TutorialHintTrigger"
+        ],
+        "methods": [
+          {
+            "visibility": "public",
+            "name": "Configure"
+          },
+          {
+            "visibility": "public",
+            "name": "Configure"
+          },
+          {
+            "visibility": "private",
+            "name": "Reset"
+          },
+          {
+            "visibility": "private",
+            "name": "OnTriggerEnter"
+          },
+          {
+            "visibility": "private",
+            "name": "OnTriggerStay"
+          },
+          {
+            "visibility": "private",
+            "name": "TryActivate"
+          }
+        ],
+        "todos": [],
+        "references": [
+          {
+            "className": "TutorialObjectiveUI",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialObjectiveUI.cs"
+          },
+          {
+            "className": "TutorialStepController",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialStepController.cs"
+          }
+        ],
+        "dependsOn": []
+      },
+      "Assets/Scripts/Tutorial/TutorialObjectiveUI.cs": {
+        "namespace": null,
+        "usings": [
+          "TMPro",
+          "UnityEngine",
+          "UnityEngine.UI"
+        ],
+        "classes": [
+          "TutorialObjectiveUI"
+        ],
+        "methods": [
+          {
+            "visibility": "private",
+            "name": "Awake"
+          },
+          {
+            "visibility": "private",
+            "name": "Update"
+          },
+          {
+            "visibility": "public",
+            "name": "ShowObjective"
+          },
+          {
+            "visibility": "public",
+            "name": "ShowHint"
+          },
+          {
+            "visibility": "public",
+            "name": "SetObjectiveTarget"
+          },
+          {
+            "visibility": "private",
+            "name": "EnsureUI"
+          },
+          {
+            "visibility": "private",
+            "name": "UpdateDirectionArrow"
+          },
+          {
+            "visibility": "private",
+            "name": "CreatePanel"
+          },
+          {
+            "visibility": "private",
+            "name": "CreateArrow"
+          },
+          {
+            "visibility": "private",
+            "name": "CreateText"
+          }
+        ],
+        "todos": [],
+        "references": [],
+        "dependsOn": []
+      },
+      "Assets/Scripts/Tutorial/TutorialQuestPlaceholder.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "TutorialQuestPlaceholder"
+        ],
+        "methods": [
+          {
+            "visibility": "private",
+            "name": "Bootstrap"
+          },
+          {
+            "visibility": "private",
+            "name": "Start"
+          },
+          {
+            "visibility": "private",
+            "name": "ResolveStepController"
+          },
+          {
+            "visibility": "private",
+            "name": "CreateTutorialBlockoutPath"
+          },
+          {
+            "visibility": "private",
+            "name": "CreateBlockoutSegment"
+          },
+          {
+            "visibility": "private",
+            "name": "FindPlayer"
+          },
+          {
+            "visibility": "private",
+            "name": "ResolveTutorialStart"
+          },
+          {
+            "visibility": "private",
+            "name": "CreateObjectiveTarget"
+          },
+          {
+            "visibility": "private",
+            "name": "CreateStepTarget"
+          },
+          {
+            "visibility": "private",
+            "name": "ResolveSlimePrefab"
+          },
+          {
+            "visibility": "private",
+            "name": "ResolveEnemyPrefab"
+          },
+          {
+            "visibility": "private",
+            "name": "ResolveScriptedShadowPrefab"
+          },
+          {
+            "visibility": "private",
+            "name": "CreateHintTrigger"
+          },
+          {
+            "visibility": "private",
+            "name": "CreateAwakenStorySequence"
+          },
+          {
+            "visibility": "private",
+            "name": "CreateStoryBeatFlow"
+          },
+          {
+            "visibility": "private",
+            "name": "CreateAwakenTrigger"
+          },
+          {
+            "visibility": "private",
+            "name": "CreateEncounterMarker"
+          }
+        ],
+        "todos": [],
+        "references": [
+          {
+            "className": "EnemySpawner",
+            "feature": "Enemy",
+            "file": "Assets/Scripts/Enemy/EnemySpawner.cs"
+          },
+          {
+            "className": "PlayerMovement",
+            "feature": "Player",
+            "file": "Assets/Scripts/Player/PlayerMovement.cs"
+          },
+          {
+            "className": "GameManager",
+            "feature": "System",
+            "file": "Assets/Scripts/System/GameManager.cs"
+          },
+          {
+            "className": "TutorialEncounterMarker",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialEncounterMarker.cs"
+          },
+          {
+            "className": "TutorialHintTrigger",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialHintTrigger.cs"
+          },
+          {
+            "className": "TutorialObjectiveUI",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialObjectiveUI.cs"
+          },
+          {
+            "className": "TutorialStepController",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialStepController.cs"
+          },
+          {
+            "className": "TutorialAwakenStorySequence",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialAwakenStorySequence.cs"
+          },
+          {
+            "className": "TutorialAwakenStoryTrigger",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialAwakenStoryTrigger.cs"
+          },
+          {
+            "className": "TutorialStoryBeatFlow",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialStoryBeatFlow.cs"
+          }
+        ],
+        "dependsOn": [
+          "Enemy",
+          "Player",
+          "System"
+        ]
+      },
+      "Assets/Scripts/Tutorial/TutorialEncounterEnemyTracker.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "TutorialEncounterEnemyTracker"
+        ],
+        "methods": [
+          {
+            "visibility": "public",
+            "name": "Configure"
+          },
+          {
+            "visibility": "private",
+            "name": "Update"
+          }
+        ],
+        "todos": [],
+        "references": [
+          {
+            "className": "EnemyHealth",
+            "feature": "Enemy",
+            "file": "Assets/Scripts/Enemy/EnemyHealth.cs"
+          },
+          {
+            "className": "TutorialEncounterMarker",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialEncounterMarker.cs"
+          }
+        ],
+        "dependsOn": [
+          "Enemy"
+        ]
+      },
+      "Assets/Scripts/Tutorial/TutorialCompletionDropTracker.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "TutorialCompletionDropTracker"
+        ],
+        "methods": [
+          {
+            "visibility": "public",
+            "name": "Configure"
+          },
+          {
+            "visibility": "private",
+            "name": "OnDestroy"
+          }
+        ],
+        "todos": [],
+        "references": [
+          {
+            "className": "TutorialStepController",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialStepController.cs"
+          }
+        ],
+        "dependsOn": []
+      },
+      "Assets/Scripts/Tutorial/TutorialStepController.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "TutorialStepController"
+        ],
+        "methods": [
+          {
+            "visibility": "private",
+            "name": "Awake"
+          },
+          {
+            "visibility": "public",
+            "name": "Configure"
+          },
+          {
+            "visibility": "public",
+            "name": "ConfigureAwakenStory"
+          },
+          {
+            "visibility": "public",
+            "name": "ConfigureStoryBeatFlow"
+          },
+          {
+            "visibility": "public",
+            "name": "BeginTutorialTravel"
+          },
+          {
+            "visibility": "public",
+            "name": "BeginAwakenStoryStep"
+          },
+          {
+            "visibility": "public",
+            "name": "IsStepActive"
+          },
+          {
+            "visibility": "public",
+            "name": "CompleteStep"
+          },
+          {
+            "visibility": "public",
+            "name": "CompleteAwakenStory"
+          },
+          {
+            "visibility": "public",
+            "name": "NotifyEncounterCleared"
+          },
+          {
+            "visibility": "public",
+            "name": "NotifyTutorialDropCollected"
+          },
+          {
+            "visibility": "private",
+            "name": "SetStep"
+          },
+          {
+            "visibility": "private",
+            "name": "GetObjectiveText"
+          },
+          {
+            "visibility": "private",
+            "name": "GetHintText"
+          },
+          {
+            "visibility": "private",
+            "name": "GetTarget"
+          },
+          {
+            "visibility": "private",
+            "name": "ApplyRunDashLock"
+          }
+        ],
+        "todos": [],
+        "references": [
+          {
+            "className": "PlayerMovement",
+            "feature": "Player",
+            "file": "Assets/Scripts/Player/PlayerMovement.cs"
+          },
+          {
+            "className": "TutorialObjectiveUI",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialObjectiveUI.cs"
+          },
+          {
+            "className": "TutorialAwakenStorySequence",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialAwakenStorySequence.cs"
+          },
+          {
+            "className": "TutorialStoryBeatFlow",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialStoryBeatFlow.cs"
+          }
+        ],
+        "dependsOn": [
+          "Player"
+        ]
+      },
+      "Assets/Scripts/Tutorial/TutorialAwakenStorySequence.cs": {
+        "namespace": null,
+        "usings": [
+          "System.Collections",
+          "UnityEngine"
+        ],
+        "classes": [
+          "TutorialAwakenStorySequence"
+        ],
+        "methods": [
+          {
+            "visibility": "public",
+            "name": "Configure"
+          },
+          {
+            "visibility": "public",
+            "name": "ConfigureStoryBeatFlow"
+          },
+          {
+            "visibility": "public",
+            "name": "BeginStory"
+          },
+          {
+            "visibility": "public",
+            "name": "TriggerFaintSequence"
+          },
+          {
+            "visibility": "private",
+            "name": "AwakenRoutine"
+          },
+          {
+            "visibility": "private",
+            "name": "SpawnGoblin"
+          },
+          {
+            "visibility": "private",
+            "name": "SpawnScriptedShadow"
+          },
+          {
+            "visibility": "private",
+            "name": "WaitForGoblinDeath"
+          },
+          {
+            "visibility": "private",
+            "name": "CompleteSequence"
+          },
+          {
+            "visibility": "private",
+            "name": "ShowObjective"
+          },
+          {
+            "visibility": "private",
+            "name": "SetPlayerInput"
+          },
+          {
+            "visibility": "private",
+            "name": "SetSummonInput"
+          }
+        ],
+        "todos": [],
+        "references": [
+          {
+            "className": "EnemyHealth",
+            "feature": "Enemy",
+            "file": "Assets/Scripts/Enemy/EnemyHealth.cs"
+          },
+          {
+            "className": "EnemySoulDrop",
+            "feature": "Enemy",
+            "file": "Assets/Scripts/Enemy/EnemySoulDrop.cs"
+          },
+          {
+            "className": "PlayerAttack",
+            "feature": "Player",
+            "file": "Assets/Scripts/Player/PlayerAttack.cs"
+          },
+          {
+            "className": "PlayerMovement",
+            "feature": "Player",
+            "file": "Assets/Scripts/Player/PlayerMovement.cs"
+          },
+          {
+            "className": "SoulStats",
+            "feature": "Soul",
+            "file": "Assets/Scripts/Soul/SoulStat.cs"
+          },
+          {
+            "className": "SummonCombat",
+            "feature": "Summon",
+            "file": "Assets/Scripts/Summon/SummonCombat.cs"
+          },
+          {
+            "className": "GameManager",
+            "feature": "System",
+            "file": "Assets/Scripts/System/GameManager.cs"
+          },
+          {
+            "className": "TutorialObjectiveUI",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialObjectiveUI.cs"
+          },
+          {
+            "className": "TutorialStepController",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialStepController.cs"
+          },
+          {
+            "className": "TutorialStoryBeatFlow",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialStoryBeatFlow.cs"
+          }
+        ],
+        "dependsOn": [
+          "Enemy",
+          "Player",
+          "Soul",
+          "Summon",
+          "System"
+        ]
+      },
+      "Assets/Scripts/Tutorial/TutorialAwakenStoryTrigger.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "TutorialAwakenStoryTrigger"
+        ],
+        "methods": [
+          {
+            "visibility": "public",
+            "name": "Configure"
+          },
+          {
+            "visibility": "private",
+            "name": "OnTriggerEnter"
+          }
+        ],
+        "todos": [],
+        "references": [
+          {
+            "className": "TutorialAwakenStorySequence",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialAwakenStorySequence.cs"
+          }
+        ],
+        "dependsOn": []
+      },
+      "Assets/Scripts/Tutorial/TutorialStoryBeatFlow.cs": {
+        "namespace": null,
+        "usings": [
+          "System.Collections",
+          "UnityEngine"
+        ],
+        "classes": [
+          "TutorialStoryBeatFlow"
+        ],
+        "methods": [
+          {
+            "visibility": "public",
+            "name": "Configure"
+          },
+          {
+            "visibility": "public",
+            "name": "BeginOpening"
+          },
+          {
+            "visibility": "public",
+            "name": "BeginLakeFamilyPlaceholder"
+          },
+          {
+            "visibility": "public",
+            "name": "BeginMerchantReturnPlaceholder"
+          },
+          {
+            "visibility": "private",
+            "name": "StartBeatRoutine"
+          },
+          {
+            "visibility": "private",
+            "name": "OpeningRoutine"
+          },
+          {
+            "visibility": "private",
+            "name": "LakeFamilyRoutine"
+          },
+          {
+            "visibility": "private",
+            "name": "MerchantReturnRoutine"
+          },
+          {
+            "visibility": "private",
+            "name": "ControlledAwakenFadeRoutine"
+          },
+          {
+            "visibility": "private",
+            "name": "WaitForControlledAwaken"
+          },
+          {
+            "visibility": "private",
+            "name": "WaitForControlledFade"
+          },
+          {
+            "visibility": "private",
+            "name": "PrepareTutorialShadowSlot"
+          },
+          {
+            "visibility": "private",
+            "name": "WaitForTutorialShadowSlot"
+          },
+          {
+            "visibility": "private",
+            "name": "ShowBeat"
+          },
+          {
+            "visibility": "private",
+            "name": "SetPlayerInput"
+          },
+          {
+            "visibility": "private",
+            "name": "SetSummonInput"
+          },
+          {
+            "visibility": "private",
+            "name": "GetActiveShadowCount"
+          },
+          {
+            "visibility": "private",
+            "name": "EnsureGameManager"
+          }
+        ],
+        "todos": [],
+        "references": [
+          {
+            "className": "PlayerAttack",
+            "feature": "Player",
+            "file": "Assets/Scripts/Player/PlayerAttack.cs"
+          },
+          {
+            "className": "PlayerMovement",
+            "feature": "Player",
+            "file": "Assets/Scripts/Player/PlayerMovement.cs"
+          },
+          {
+            "className": "GameManager",
+            "feature": "System",
+            "file": "Assets/Scripts/System/GameManager.cs"
+          },
+          {
+            "className": "TutorialObjectiveUI",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialObjectiveUI.cs"
+          },
+          {
+            "className": "TutorialStepController",
+            "feature": "Tutorial",
+            "file": "Assets/Scripts/Tutorial/TutorialStepController.cs"
+          }
+        ],
+        "dependsOn": [
+          "Player",
+          "System"
+        ]
+      }
+    },
+    "dependsOn": [
+      "Enemy",
+      "Soul",
+      "Player",
+      "System",
+      "Summon"
+    ],
+    "details": {
+      "classUsage": [
+        {
+          "fromClass": "TutorialEncounterMarker",
+          "toClass": "EnemyHealth",
+          "toFeature": "Enemy",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialEncounterMarker",
+          "toClass": "EnemySoulDrop",
+          "toFeature": "Enemy",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialEncounterMarker",
+          "toClass": "SoulObject",
+          "toFeature": "Soul",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialEncounterMarker",
+          "toClass": "SoulPickup",
+          "toFeature": "Soul",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialEncounterMarker",
+          "toClass": "TutorialObjectiveUI",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialEncounterMarker",
+          "toClass": "TutorialEncounterEnemyTracker",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialEncounterMarker",
+          "toClass": "TutorialCompletionDropTracker",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialEncounterMarker",
+          "toClass": "TutorialStepController",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialHintTrigger",
+          "toClass": "TutorialObjectiveUI",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialHintTrigger",
+          "toClass": "TutorialStepController",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialQuestPlaceholder",
+          "toClass": "EnemySpawner",
+          "toFeature": "Enemy",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialQuestPlaceholder",
+          "toClass": "PlayerMovement",
+          "toFeature": "Player",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialQuestPlaceholder",
+          "toClass": "GameManager",
+          "toFeature": "System",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialQuestPlaceholder",
+          "toClass": "TutorialEncounterMarker",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialQuestPlaceholder",
+          "toClass": "TutorialHintTrigger",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialQuestPlaceholder",
+          "toClass": "TutorialObjectiveUI",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialQuestPlaceholder",
+          "toClass": "TutorialStepController",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialQuestPlaceholder",
+          "toClass": "TutorialAwakenStorySequence",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialQuestPlaceholder",
+          "toClass": "TutorialAwakenStoryTrigger",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialQuestPlaceholder",
+          "toClass": "TutorialStoryBeatFlow",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialEncounterEnemyTracker",
+          "toClass": "EnemyHealth",
+          "toFeature": "Enemy",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialEncounterEnemyTracker",
+          "toClass": "TutorialEncounterMarker",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialCompletionDropTracker",
+          "toClass": "TutorialStepController",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialStepController",
+          "toClass": "PlayerMovement",
+          "toFeature": "Player",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialStepController",
+          "toClass": "TutorialObjectiveUI",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialStepController",
+          "toClass": "TutorialAwakenStorySequence",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialStepController",
+          "toClass": "TutorialStoryBeatFlow",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialAwakenStorySequence",
+          "toClass": "EnemyHealth",
+          "toFeature": "Enemy",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialAwakenStorySequence",
+          "toClass": "EnemySoulDrop",
+          "toFeature": "Enemy",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialAwakenStorySequence",
+          "toClass": "PlayerAttack",
+          "toFeature": "Player",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialAwakenStorySequence",
+          "toClass": "PlayerMovement",
+          "toFeature": "Player",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialAwakenStorySequence",
+          "toClass": "SoulStats",
+          "toFeature": "Soul",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialAwakenStorySequence",
+          "toClass": "SummonCombat",
+          "toFeature": "Summon",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialAwakenStorySequence",
+          "toClass": "GameManager",
+          "toFeature": "System",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialAwakenStorySequence",
+          "toClass": "TutorialObjectiveUI",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialAwakenStorySequence",
+          "toClass": "TutorialStepController",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialAwakenStorySequence",
+          "toClass": "TutorialStoryBeatFlow",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialAwakenStoryTrigger",
+          "toClass": "TutorialAwakenStorySequence",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialStoryBeatFlow",
+          "toClass": "PlayerAttack",
+          "toFeature": "Player",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialStoryBeatFlow",
+          "toClass": "PlayerMovement",
+          "toFeature": "Player",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialStoryBeatFlow",
+          "toClass": "GameManager",
+          "toFeature": "System",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialStoryBeatFlow",
+          "toClass": "TutorialObjectiveUI",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "TutorialStoryBeatFlow",
+          "toClass": "TutorialStepController",
+          "toFeature": "Tutorial",
+          "confidence": "Possible"
+        }
+      ],
+      "methodCalls": [
+        {
+          "fromMethod": "NotifyEnemyDefeated",
+          "toMethod": "SpawnCompletionDrop",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "OnTriggerEnter",
+          "toMethod": "TryStartEncounter",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "OnTriggerStay",
+          "toMethod": "TryStartEncounter",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "TryStartEncounter",
+          "toMethod": "SpawnEncounter",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "SpawnEncounter",
+          "toMethod": "Configure",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "SpawnCompletionDrop",
+          "toMethod": "Configure",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "OnTriggerEnter",
+          "toMethod": "TryActivate",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "OnTriggerStay",
+          "toMethod": "TryActivate",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Awake",
+          "toMethod": "EnsureUI",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Update",
+          "toMethod": "UpdateDirectionArrow",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "ShowObjective",
+          "toMethod": "EnsureUI",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "ShowHint",
+          "toMethod": "EnsureUI",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "SetObjectiveTarget",
+          "toMethod": "UpdateDirectionArrow",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "EnsureUI",
+          "toMethod": "CreatePanel",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "EnsureUI",
+          "toMethod": "CreateArrow",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "EnsureUI",
+          "toMethod": "CreateText",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "UpdateDirectionArrow",
+          "toMethod": "EnsureUI",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Start",
+          "toMethod": "ResolveStepController",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Start",
+          "toMethod": "CreateTutorialBlockoutPath",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Start",
+          "toMethod": "FindPlayer",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Start",
+          "toMethod": "ResolveTutorialStart",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Start",
+          "toMethod": "CreateObjectiveTarget",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Start",
+          "toMethod": "CreateStepTarget",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Start",
+          "toMethod": "ResolveSlimePrefab",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Start",
+          "toMethod": "ResolveEnemyPrefab",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Start",
+          "toMethod": "ResolveScriptedShadowPrefab",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Start",
+          "toMethod": "CreateHintTrigger",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Start",
+          "toMethod": "CreateAwakenStorySequence",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Start",
+          "toMethod": "CreateStoryBeatFlow",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Start",
+          "toMethod": "CreateEncounterMarker",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "CreateTutorialBlockoutPath",
+          "toMethod": "CreateBlockoutSegment",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "CreateObjectiveTarget",
+          "toMethod": "CreateStepTarget",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "ResolveSlimePrefab",
+          "toMethod": "ResolveEnemyPrefab",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "CreateAwakenStorySequence",
+          "toMethod": "CreateAwakenTrigger",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Configure",
+          "toMethod": "SetStep",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "BeginTutorialTravel",
+          "toMethod": "SetStep",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "BeginAwakenStoryStep",
+          "toMethod": "SetStep",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "CompleteStep",
+          "toMethod": "BeginAwakenStoryStep",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "CompleteStep",
+          "toMethod": "SetStep",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "CompleteAwakenStory",
+          "toMethod": "CompleteStep",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "NotifyEncounterCleared",
+          "toMethod": "SetStep",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "NotifyTutorialDropCollected",
+          "toMethod": "CompleteStep",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "SetStep",
+          "toMethod": "GetObjectiveText",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "SetStep",
+          "toMethod": "GetHintText",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "SetStep",
+          "toMethod": "GetTarget",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "SetStep",
+          "toMethod": "ApplyRunDashLock",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Configure",
+          "toMethod": "SetSummonInput",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "BeginStory",
+          "toMethod": "ShowObjective",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "BeginStory",
+          "toMethod": "SetSummonInput",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "TriggerFaintSequence",
+          "toMethod": "AwakenRoutine",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "AwakenRoutine",
+          "toMethod": "SpawnGoblin",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "AwakenRoutine",
+          "toMethod": "SpawnScriptedShadow",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "AwakenRoutine",
+          "toMethod": "WaitForGoblinDeath",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "AwakenRoutine",
+          "toMethod": "CompleteSequence",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "AwakenRoutine",
+          "toMethod": "ShowObjective",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "AwakenRoutine",
+          "toMethod": "SetPlayerInput",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "CompleteSequence",
+          "toMethod": "SetPlayerInput",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "CompleteSequence",
+          "toMethod": "SetSummonInput",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "BeginOpening",
+          "toMethod": "StartBeatRoutine",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "BeginOpening",
+          "toMethod": "OpeningRoutine",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "BeginLakeFamilyPlaceholder",
+          "toMethod": "StartBeatRoutine",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "BeginLakeFamilyPlaceholder",
+          "toMethod": "LakeFamilyRoutine",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "BeginMerchantReturnPlaceholder",
+          "toMethod": "StartBeatRoutine",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "BeginMerchantReturnPlaceholder",
+          "toMethod": "MerchantReturnRoutine",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "OpeningRoutine",
+          "toMethod": "ShowBeat",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "OpeningRoutine",
+          "toMethod": "SetPlayerInput",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "LakeFamilyRoutine",
+          "toMethod": "ShowBeat",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "MerchantReturnRoutine",
+          "toMethod": "ControlledAwakenFadeRoutine",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "MerchantReturnRoutine",
+          "toMethod": "ShowBeat",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "ControlledAwakenFadeRoutine",
+          "toMethod": "WaitForControlledAwaken",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "ControlledAwakenFadeRoutine",
+          "toMethod": "WaitForControlledFade",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "ControlledAwakenFadeRoutine",
+          "toMethod": "PrepareTutorialShadowSlot",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "ControlledAwakenFadeRoutine",
+          "toMethod": "WaitForTutorialShadowSlot",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "ControlledAwakenFadeRoutine",
+          "toMethod": "SetSummonInput",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "ControlledAwakenFadeRoutine",
+          "toMethod": "EnsureGameManager",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "WaitForControlledAwaken",
+          "toMethod": "ShowBeat",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "WaitForControlledAwaken",
+          "toMethod": "SetSummonInput",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "WaitForControlledAwaken",
+          "toMethod": "GetActiveShadowCount",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "WaitForControlledAwaken",
+          "toMethod": "EnsureGameManager",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "WaitForControlledFade",
+          "toMethod": "ShowBeat",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "WaitForControlledFade",
+          "toMethod": "SetSummonInput",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "WaitForControlledFade",
+          "toMethod": "GetActiveShadowCount",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "WaitForControlledFade",
+          "toMethod": "EnsureGameManager",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "PrepareTutorialShadowSlot",
+          "toMethod": "EnsureGameManager",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "WaitForTutorialShadowSlot",
+          "toMethod": "PrepareTutorialShadowSlot",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "WaitForTutorialShadowSlot",
+          "toMethod": "ShowBeat",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "WaitForTutorialShadowSlot",
+          "toMethod": "EnsureGameManager",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "SetSummonInput",
+          "toMethod": "EnsureGameManager",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "GetActiveShadowCount",
+          "toMethod": "EnsureGameManager",
+          "confidence": "Possible"
+        }
+      ],
+      "publicApiUsage": [],
+      "circularDependencies": [],
+      "possibleUnusedApis": []
+    }
+  },
+  "insight": {
+    "classCount": 10,
+    "methodCount": 94,
+    "todoCount": 0,
+    "publicAPIs": [
+      "Configure",
+      "NotifyEnemyDefeated",
+      "ShowObjective",
+      "ShowHint",
+      "SetObjectiveTarget",
+      "ConfigureAwakenStory",
+      "ConfigureStoryBeatFlow",
+      "BeginTutorialTravel",
+      "BeginAwakenStoryStep",
+      "IsStepActive",
+      "CompleteStep",
+      "CompleteAwakenStory",
+      "NotifyEncounterCleared",
+      "NotifyTutorialDropCollected",
+      "BeginStory",
+      "TriggerFaintSequence",
+      "BeginOpening",
+      "BeginLakeFamilyPlaceholder",
+      "BeginMerchantReturnPlaceholder"
+    ],
+    "knownReferences": [
+      {
+        "className": "EnemyHealth",
+        "feature": "Enemy",
+        "file": "Assets/Scripts/Enemy/EnemyHealth.cs"
+      },
+      {
+        "className": "EnemySoulDrop",
+        "feature": "Enemy",
+        "file": "Assets/Scripts/Enemy/EnemySoulDrop.cs"
+      },
+      {
+        "className": "SoulObject",
+        "feature": "Soul",
+        "file": "Assets/Scripts/Soul/SoulObject.cs"
+      },
+      {
+        "className": "SoulPickup",
+        "feature": "Soul",
+        "file": "Assets/Scripts/Soul/SoulPickup.cs"
+      },
+      {
+        "className": "TutorialObjectiveUI",
+        "feature": "Tutorial",
+        "file": "Assets/Scripts/Tutorial/TutorialObjectiveUI.cs"
+      },
+      {
+        "className": "TutorialEncounterEnemyTracker",
+        "feature": "Tutorial",
+        "file": "Assets/Scripts/Tutorial/TutorialEncounterEnemyTracker.cs"
+      },
+      {
+        "className": "TutorialCompletionDropTracker",
+        "feature": "Tutorial",
+        "file": "Assets/Scripts/Tutorial/TutorialCompletionDropTracker.cs"
+      },
+      {
+        "className": "TutorialStepController",
+        "feature": "Tutorial",
+        "file": "Assets/Scripts/Tutorial/TutorialStepController.cs"
+      },
+      {
+        "className": "EnemySpawner",
+        "feature": "Enemy",
+        "file": "Assets/Scripts/Enemy/EnemySpawner.cs"
+      },
+      {
+        "className": "PlayerMovement",
+        "feature": "Player",
+        "file": "Assets/Scripts/Player/PlayerMovement.cs"
+      },
+      {
+        "className": "GameManager",
+        "feature": "System",
+        "file": "Assets/Scripts/System/GameManager.cs"
+      },
+      {
+        "className": "TutorialEncounterMarker",
+        "feature": "Tutorial",
+        "file": "Assets/Scripts/Tutorial/TutorialEncounterMarker.cs"
+      },
+      {
+        "className": "TutorialHintTrigger",
+        "feature": "Tutorial",
+        "file": "Assets/Scripts/Tutorial/TutorialHintTrigger.cs"
+      },
+      {
+        "className": "TutorialAwakenStorySequence",
+        "feature": "Tutorial",
+        "file": "Assets/Scripts/Tutorial/TutorialAwakenStorySequence.cs"
+      },
+      {
+        "className": "TutorialAwakenStoryTrigger",
+        "feature": "Tutorial",
+        "file": "Assets/Scripts/Tutorial/TutorialAwakenStoryTrigger.cs"
+      },
+      {
+        "className": "TutorialStoryBeatFlow",
+        "feature": "Tutorial",
+        "file": "Assets/Scripts/Tutorial/TutorialStoryBeatFlow.cs"
+      },
+      {
+        "className": "PlayerAttack",
+        "feature": "Player",
+        "file": "Assets/Scripts/Player/PlayerAttack.cs"
+      },
+      {
+        "className": "SoulStats",
+        "feature": "Soul",
+        "file": "Assets/Scripts/Soul/SoulStat.cs"
+      },
+      {
+        "className": "SummonCombat",
+        "feature": "Summon",
+        "file": "Assets/Scripts/Summon/SummonCombat.cs"
+      }
+    ],
+    "riskHints": [
+      "Depends on Enemy, Soul, Player, System, Summon",
+      "Exposes many public methods"
+    ]
+  },
+  "architecture": {
+    "outgoing": [
+      {
+        "from": "Tutorial",
+        "to": "Enemy",
+        "type": "dependsOn",
+        "weight": 3,
+        "references": [
+          "EnemyHealth",
+          "EnemySoulDrop",
+          "EnemySpawner"
+        ]
+      },
+      {
+        "from": "Tutorial",
+        "to": "Soul",
+        "type": "dependsOn",
+        "weight": 3,
+        "references": [
+          "SoulObject",
+          "SoulPickup",
+          "SoulStats"
+        ]
+      },
+      {
+        "from": "Tutorial",
+        "to": "Player",
+        "type": "dependsOn",
+        "weight": 2,
+        "references": [
+          "PlayerMovement",
+          "PlayerAttack"
+        ]
+      },
+      {
+        "from": "Tutorial",
+        "to": "System",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "GameManager"
+        ]
+      },
+      {
+        "from": "Tutorial",
+        "to": "Summon",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "SummonCombat"
+        ]
+      }
+    ],
+    "incoming": [],
+    "risks": [
+      {
+        "feature": "Tutorial",
+        "type": "high-dependency-count",
+        "message": "Tutorial depends on 5 features."
+      },
+      {
+        "feature": "Tutorial",
+        "type": "high-public-api-count",
+        "message": "Tutorial exposes many public methods."
+      },
+      {
+        "feature": "Tutorial",
+        "type": "high-method-count",
+        "message": "Tutorial has many methods."
+      }
+    ],
+    "riskLevel": "High",
+    "intelligence": {
+      "feature": "Tutorial",
+      "hotspotLevel": "High",
+      "godObjectRisk": "High",
+      "responsibilityRisk": "High",
+      "bottleneckRisk": "Medium",
+      "circularArchitecture": [],
+      "refactorPriority": "High",
+      "findings": [
+        "Tutorial has many methods or public APIs.",
+        "Tutorial may have possible god object pressure.",
+        "Tutorial may be carrying multiple responsibilities.",
+        "Tutorial may act as an architectural bottleneck."
+      ],
+      "suggestions": [
+        "Avoid adding unrelated methods to Tutorial.",
+        "Review public APIs before adding more.",
+        "Review dependent features before changing coordination logic.",
+        "Consider splitting responsibilities if this feature keeps growing."
+      ],
+      "godObjectReasons": [
+        "many methods",
+        "many public APIs",
+        "multiple responsibility domains"
+      ],
+      "responsibilityReasons": [
+        "many outgoing dependencies",
+        "multiple responsibility domains",
+        "many files"
+      ],
+      "bottleneckReasons": [
+        "many outgoing dependencies",
+        "large public API surface",
+        "many detailed code links"
+      ]
+    }
+  },
+  "summary": {
+    "feature": "Tutorial",
+    "shortDescription": "Gameplay feature responsible for enemy behaviour, soul collection, and player state.",
+    "responsibility": "Manages enemy behaviour and combat interactions, soul collection and access, and player state and player-driven actions.",
+    "mainPurpose": "Coordinates Enemy Behaviour, Soul Collection, and Player State with Enemy, Soul, Player, System, and Summon so enemy actors can participate in combat and progression.",
+    "mainAPIs": [
+      "Configure",
+      "NotifyEnemyDefeated",
+      "ShowObjective",
+      "ShowHint",
+      "SetObjectiveTarget",
+      "ConfigureAwakenStory",
+      "ConfigureStoryBeatFlow",
+      "BeginTutorialTravel",
+      "BeginAwakenStoryStep",
+      "IsStepActive"
+    ],
+    "riskSummary": "High risk due to multiple feature dependencies and many methods.",
+    "aiHint": "Review dependent features before modifying internal logic. Keep changes narrow because this feature already has many methods. Avoid adding unrelated responsibilities."
+  },
+  "updatedAt": "2026-07-09T19:10:08.391Z",
+  "updated": "2026-07-09T19:10:08.391Z",
+  "instruction": "Use this compiled context to understand the Tutorial system before suggesting code changes.",
+  "quality": {
+    "overallScore": 92,
+    "overallRating": "Excellent",
+    "aiReadiness": "Excellent",
+    "completeness": "Excellent",
+    "dependencyCoverage": "Good",
+    "architectureCoverage": "Good",
+    "summaryQuality": "Excellent",
+    "dependencyDetailConfidence": "Moderate",
+    "strengths": [
+      "Rich semantic summary",
+      "Clear responsibilities",
+      "Architecture risks detected",
+      "Public APIs documented",
+      "Good dependency information",
+      "AI guidance available"
+    ],
+    "weaknesses": [
+      "No TODO information",
+      "No design decisions",
+      "Dependency details are mostly heuristic"
+    ]
+  }
+}

@@ -1,0 +1,611 @@
+{
+  "schemaVersion": "1.0",
+  "feature": "Player",
+  "files": [
+    "Assets/Scripts/Player/Core/CameraFollow.cs",
+    "Assets/Scripts/Player/PlayerAttack.cs",
+    "Assets/Scripts/Player/PlayerHealth.cs",
+    "Assets/Scripts/Player/PlayerMovement.cs",
+    "Assets/Scripts/PlayerLevel.cs"
+  ],
+  "ownedFiles": [],
+  "integrationPoints": [],
+  "commits": [
+    {
+      "hash": "20c3003b33f2c60acfcac0b75aedc730d61aecc9",
+      "shortHash": "20c3003b",
+      "message": "Improve combat readability and fix duplicate soul drop",
+      "createdAt": "2026-07-06T15:49:36.264Z",
+      "time": "2026-07-06T15:49:36.264Z"
+    },
+    {
+      "hash": "5d3651cfa010ab50453dc244f58732626be6cf19",
+      "shortHash": "5d3651cf",
+      "message": "Add tutorial flow and first encounter polish",
+      "createdAt": "2026-07-07T17:20:48.515Z",
+      "time": "2026-07-07T17:20:48.515Z"
+    },
+    {
+      "hash": "0db56f90cf071a85020764a8a21c93c68d4aeb03",
+      "shortHash": "0db56f90",
+      "message": "Add ground run and dash movement",
+      "createdAt": "2026-07-07T17:52:45.703Z",
+      "time": "2026-07-07T17:52:45.703Z"
+    },
+    {
+      "hash": "844789f49a34bbf340a78671f75ccf3d9b71f11f",
+      "shortHash": "844789f4",
+      "message": "tutorial basic playable complete",
+      "createdAt": "2026-07-08T11:31:52.953Z",
+      "time": "2026-07-08T11:31:52.953Z"
+    }
+  ],
+  "decisions": [],
+  "dependencies": {
+    "schemaVersion": "1.0",
+    "generatedAt": "2026-07-09T19:10:07.977Z",
+    "files": {
+      "Assets/Scripts/Player/Core/CameraFollow.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "CameraFollow"
+        ],
+        "methods": [
+          {
+            "visibility": "private",
+            "name": "LateUpdate"
+          }
+        ],
+        "todos": [],
+        "references": [],
+        "dependsOn": []
+      },
+      "Assets/Scripts/Player/PlayerAttack.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "PlayerAttack"
+        ],
+        "methods": [
+          {
+            "visibility": "private",
+            "name": "Update"
+          },
+          {
+            "visibility": "private",
+            "name": "BasicAttackSingleTarget"
+          },
+          {
+            "visibility": "private",
+            "name": "FindSingleTargetEnemy"
+          },
+          {
+            "visibility": "private",
+            "name": "NotifySummons"
+          }
+        ],
+        "todos": [],
+        "references": [
+          {
+            "className": "EnemyHealth",
+            "feature": "Enemy",
+            "file": "Assets/Scripts/Enemy/EnemyHealth.cs"
+          },
+          {
+            "className": "SummonCombat",
+            "feature": "Summon",
+            "file": "Assets/Scripts/Summon/SummonCombat.cs"
+          }
+        ],
+        "dependsOn": [
+          "Enemy",
+          "Summon"
+        ]
+      },
+      "Assets/Scripts/Player/PlayerHealth.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine",
+          "TMPro"
+        ],
+        "classes": [
+          "PlayerHealth"
+        ],
+        "methods": [
+          {
+            "visibility": "private",
+            "name": "Start"
+          },
+          {
+            "visibility": "public",
+            "name": "TakeDamage"
+          },
+          {
+            "visibility": "private",
+            "name": "Update"
+          },
+          {
+            "visibility": "private",
+            "name": "Die"
+          }
+        ],
+        "todos": [],
+        "references": [
+          {
+            "className": "EnemyHealth",
+            "feature": "Enemy",
+            "file": "Assets/Scripts/Enemy/EnemyHealth.cs"
+          },
+          {
+            "className": "SummonCombat",
+            "feature": "Summon",
+            "file": "Assets/Scripts/Summon/SummonCombat.cs"
+          },
+          {
+            "className": "CombatReadabilityFeedback",
+            "feature": "Combat",
+            "file": "Assets/Scripts/Combat/CombatReadabilityFeedback.cs"
+          }
+        ],
+        "dependsOn": [
+          "Enemy",
+          "Summon",
+          "Combat"
+        ]
+      },
+      "Assets/Scripts/Player/PlayerMovement.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "PlayerMovement"
+        ],
+        "methods": [
+          {
+            "visibility": "private",
+            "name": "Start"
+          },
+          {
+            "visibility": "private",
+            "name": "Update"
+          },
+          {
+            "visibility": "public",
+            "name": "SetRunDashEnabled"
+          },
+          {
+            "visibility": "private",
+            "name": "ReadMoveInput"
+          },
+          {
+            "visibility": "private",
+            "name": "HandleShiftInput"
+          },
+          {
+            "visibility": "private",
+            "name": "IsShiftHeldLongEnough"
+          },
+          {
+            "visibility": "private",
+            "name": "TryStartRun"
+          },
+          {
+            "visibility": "private",
+            "name": "UpdateRunTimer"
+          },
+          {
+            "visibility": "private",
+            "name": "StopRun"
+          },
+          {
+            "visibility": "private",
+            "name": "TryDash"
+          },
+          {
+            "visibility": "private",
+            "name": "MovePlayer"
+          },
+          {
+            "visibility": "private",
+            "name": "GetMovementDirectionForBurst"
+          }
+        ],
+        "todos": [],
+        "references": [],
+        "dependsOn": []
+      },
+      "Assets/Scripts/PlayerLevel.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "PlayerLevel"
+        ],
+        "methods": [
+          {
+            "visibility": "public",
+            "name": "GainExp"
+          },
+          {
+            "visibility": "private",
+            "name": "LevelUp"
+          }
+        ],
+        "todos": [],
+        "references": [],
+        "dependsOn": []
+      }
+    },
+    "dependsOn": [
+      "Enemy",
+      "Summon",
+      "Combat"
+    ],
+    "details": {
+      "classUsage": [
+        {
+          "fromClass": "PlayerAttack",
+          "toClass": "EnemyHealth",
+          "toFeature": "Enemy",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "PlayerAttack",
+          "toClass": "SummonCombat",
+          "toFeature": "Summon",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "PlayerHealth",
+          "toClass": "EnemyHealth",
+          "toFeature": "Enemy",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "PlayerHealth",
+          "toClass": "SummonCombat",
+          "toFeature": "Summon",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "PlayerHealth",
+          "toClass": "CombatReadabilityFeedback",
+          "toFeature": "Combat",
+          "confidence": "Possible"
+        }
+      ],
+      "methodCalls": [
+        {
+          "fromMethod": "Update",
+          "toMethod": "BasicAttackSingleTarget",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "BasicAttackSingleTarget",
+          "toMethod": "FindSingleTargetEnemy",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "BasicAttackSingleTarget",
+          "toMethod": "NotifySummons",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "TakeDamage",
+          "toMethod": "Die",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Update",
+          "toMethod": "TakeDamage",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Update",
+          "toMethod": "ReadMoveInput",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Update",
+          "toMethod": "HandleShiftInput",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Update",
+          "toMethod": "UpdateRunTimer",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Update",
+          "toMethod": "MovePlayer",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "HandleShiftInput",
+          "toMethod": "IsShiftHeldLongEnough",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "HandleShiftInput",
+          "toMethod": "TryStartRun",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "HandleShiftInput",
+          "toMethod": "TryDash",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "UpdateRunTimer",
+          "toMethod": "StopRun",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "TryDash",
+          "toMethod": "GetMovementDirectionForBurst",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "GainExp",
+          "toMethod": "LevelUp",
+          "confidence": "Possible"
+        }
+      ],
+      "publicApiUsage": [
+        {
+          "api": "TakeDamage",
+          "fromFeature": "Enemy",
+          "toFeature": "Player",
+          "className": "PlayerHealth",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "TakeDamage",
+          "fromFeature": "Shadow",
+          "toFeature": "Player",
+          "className": "PlayerHealth",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "TakeDamage",
+          "fromFeature": "Summon",
+          "toFeature": "Player",
+          "className": "PlayerHealth",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "TakeDamage",
+          "fromFeature": "ShadowHealth.cs",
+          "toFeature": "Player",
+          "className": "PlayerHealth",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "SetRunDashEnabled",
+          "fromFeature": "Tutorial",
+          "toFeature": "Player",
+          "className": "PlayerMovement",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "GainExp",
+          "fromFeature": "Enemy",
+          "toFeature": "Player",
+          "className": "PlayerLevel",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "GainExp",
+          "fromFeature": "Shadow",
+          "toFeature": "Player",
+          "className": "PlayerLevel",
+          "confidence": "Possible API usage"
+        }
+      ],
+      "circularDependencies": [
+        {
+          "from": "Player",
+          "to": "Enemy",
+          "confidence": "Possible"
+        },
+        {
+          "from": "Player",
+          "to": "Summon",
+          "confidence": "Possible"
+        }
+      ],
+      "possibleUnusedApis": []
+    }
+  },
+  "insight": {
+    "classCount": 5,
+    "methodCount": 23,
+    "todoCount": 0,
+    "publicAPIs": [
+      "TakeDamage",
+      "SetRunDashEnabled",
+      "GainExp"
+    ],
+    "knownReferences": [
+      {
+        "className": "EnemyHealth",
+        "feature": "Enemy",
+        "file": "Assets/Scripts/Enemy/EnemyHealth.cs"
+      },
+      {
+        "className": "SummonCombat",
+        "feature": "Summon",
+        "file": "Assets/Scripts/Summon/SummonCombat.cs"
+      },
+      {
+        "className": "CombatReadabilityFeedback",
+        "feature": "Combat",
+        "file": "Assets/Scripts/Combat/CombatReadabilityFeedback.cs"
+      }
+    ],
+    "riskHints": [
+      "Depends on Enemy, Summon, Combat"
+    ]
+  },
+  "architecture": {
+    "outgoing": [
+      {
+        "from": "Player",
+        "to": "Enemy",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "EnemyHealth"
+        ]
+      },
+      {
+        "from": "Player",
+        "to": "Summon",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "SummonCombat"
+        ]
+      },
+      {
+        "from": "Player",
+        "to": "Combat",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "CombatReadabilityFeedback"
+        ]
+      }
+    ],
+    "incoming": [
+      {
+        "from": "Enemy",
+        "to": "Player",
+        "type": "dependsOn",
+        "weight": 2,
+        "references": [
+          "PlayerHealth",
+          "PlayerLevel"
+        ]
+      },
+      {
+        "from": "Summon",
+        "to": "Player",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "PlayerHealth"
+        ]
+      },
+      {
+        "from": "Tutorial",
+        "to": "Player",
+        "type": "dependsOn",
+        "weight": 2,
+        "references": [
+          "PlayerMovement",
+          "PlayerAttack"
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "feature": "Player",
+        "type": "high-dependency-count",
+        "message": "Player depends on 3 features."
+      }
+    ],
+    "riskLevel": "Medium",
+    "intelligence": {
+      "feature": "Player",
+      "hotspotLevel": "Medium",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "High",
+      "bottleneckRisk": "Medium",
+      "circularArchitecture": [
+        {
+          "from": "Player",
+          "to": "Enemy",
+          "confidence": "Possible"
+        },
+        {
+          "from": "Player",
+          "to": "Summon",
+          "confidence": "Possible"
+        }
+      ],
+      "refactorPriority": "High",
+      "findings": [
+        "Player has both incoming and outgoing dependencies.",
+        "Player participates in possible circular dependencies with Enemy, Summon.",
+        "Player may have possible god object pressure.",
+        "Player may be carrying multiple responsibilities.",
+        "Player may act as an architectural bottleneck."
+      ],
+      "suggestions": [
+        "Review dependent features before changing coordination logic.",
+        "Changing this feature may affect multiple systems.",
+        "Consider reducing bidirectional dependencies over time."
+      ],
+      "godObjectReasons": [
+        "multiple responsibility domains",
+        "central incoming/outgoing role"
+      ],
+      "responsibilityReasons": [
+        "many outgoing dependencies",
+        "multiple responsibility domains",
+        "mixed incoming and outgoing dependencies"
+      ],
+      "bottleneckReasons": [
+        "many incoming dependencies",
+        "many outgoing dependencies"
+      ]
+    }
+  },
+  "summary": {
+    "feature": "Player",
+    "shortDescription": "Gameplay feature responsible for player state, summon flow, and enemy behaviour.",
+    "responsibility": "Manages player state and player-driven actions, summon flow and active unit coordination, and enemy behaviour and combat interactions.",
+    "mainPurpose": "Coordinates Player State, Summon Flow, and Enemy Behaviour with Enemy, Summon, and Combat so player actions and state changes drive gameplay.",
+    "mainAPIs": [
+      "TakeDamage",
+      "SetRunDashEnabled",
+      "GainExp"
+    ],
+    "riskSummary": "Medium risk due to multiple feature dependencies and many incoming dependents.",
+    "aiHint": "Changing public APIs may affect multiple gameplay systems. Review dependent features before modifying internal logic."
+  },
+  "updatedAt": "2026-07-09T19:10:08.391Z",
+  "updated": "2026-07-09T19:10:08.391Z",
+  "instruction": "Use this compiled context to understand the Player system before suggesting code changes.",
+  "quality": {
+    "overallScore": 92,
+    "overallRating": "Excellent",
+    "aiReadiness": "Excellent",
+    "completeness": "Excellent",
+    "dependencyCoverage": "Excellent",
+    "architectureCoverage": "Excellent",
+    "summaryQuality": "Excellent",
+    "dependencyDetailConfidence": "Moderate",
+    "strengths": [
+      "Rich semantic summary",
+      "Clear responsibilities",
+      "Architecture risks detected",
+      "Public APIs documented",
+      "Good dependency information",
+      "AI guidance available"
+    ],
+    "weaknesses": [
+      "No TODO information",
+      "No design decisions",
+      "Dependency details are mostly heuristic"
+    ]
+  }
+}

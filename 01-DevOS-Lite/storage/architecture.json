@@ -1,0 +1,880 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-07-09T19:10:08.385Z",
+  "nodes": [
+    {
+      "id": "Army",
+      "type": "feature",
+      "fileCount": 2,
+      "classCount": 2,
+      "methodCount": 17,
+      "todoCount": 0
+    },
+    {
+      "id": "Enemy",
+      "type": "feature",
+      "fileCount": 4,
+      "classCount": 4,
+      "methodCount": 20,
+      "todoCount": 0
+    },
+    {
+      "id": "Player",
+      "type": "feature",
+      "fileCount": 5,
+      "classCount": 5,
+      "methodCount": 23,
+      "todoCount": 0
+    },
+    {
+      "id": "Shadow",
+      "type": "feature",
+      "fileCount": 2,
+      "classCount": 2,
+      "methodCount": 8,
+      "todoCount": 0
+    },
+    {
+      "id": "Soul",
+      "type": "feature",
+      "fileCount": 9,
+      "classCount": 5,
+      "methodCount": 20,
+      "todoCount": 0
+    },
+    {
+      "id": "Summon",
+      "type": "feature",
+      "fileCount": 2,
+      "classCount": 2,
+      "methodCount": 17,
+      "todoCount": 0
+    },
+    {
+      "id": "System",
+      "type": "feature",
+      "fileCount": 3,
+      "classCount": 3,
+      "methodCount": 66,
+      "todoCount": 1
+    },
+    {
+      "id": "General",
+      "type": "feature",
+      "fileCount": 7,
+      "classCount": 0,
+      "methodCount": 0,
+      "todoCount": 0
+    },
+    {
+      "id": "DevOS",
+      "type": "feature",
+      "fileCount": 14,
+      "classCount": 0,
+      "methodCount": 0,
+      "todoCount": 0
+    },
+    {
+      "id": "Combat.meta",
+      "type": "feature",
+      "fileCount": 1,
+      "classCount": 0,
+      "methodCount": 0,
+      "todoCount": 0
+    },
+    {
+      "id": "Combat",
+      "type": "feature",
+      "fileCount": 2,
+      "classCount": 1,
+      "methodCount": 13,
+      "todoCount": 0
+    },
+    {
+      "id": "ShadowHealth.cs",
+      "type": "feature",
+      "fileCount": 1,
+      "classCount": 1,
+      "methodCount": 6,
+      "todoCount": 0
+    },
+    {
+      "id": "Tutorial.meta",
+      "type": "feature",
+      "fileCount": 1,
+      "classCount": 0,
+      "methodCount": 0,
+      "todoCount": 0
+    },
+    {
+      "id": "Tutorial",
+      "type": "feature",
+      "fileCount": 20,
+      "classCount": 10,
+      "methodCount": 94,
+      "todoCount": 0
+    },
+    {
+      "id": "Interaction",
+      "type": "feature",
+      "fileCount": 8,
+      "classCount": 6,
+      "methodCount": 29,
+      "todoCount": 0
+    }
+  ],
+  "edges": [
+    {
+      "from": "Army",
+      "to": "Soul",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "SoulCollectionEntry"
+      ]
+    },
+    {
+      "from": "Army",
+      "to": "System",
+      "type": "dependsOn",
+      "weight": 2,
+      "references": [
+        "ArmyEntry",
+        "GameManager"
+      ]
+    },
+    {
+      "from": "Enemy",
+      "to": "Player",
+      "type": "dependsOn",
+      "weight": 2,
+      "references": [
+        "PlayerHealth",
+        "PlayerLevel"
+      ]
+    },
+    {
+      "from": "Enemy",
+      "to": "Shadow",
+      "type": "dependsOn",
+      "weight": 2,
+      "references": [
+        "ShadowHealth",
+        "ShadowLevel"
+      ]
+    },
+    {
+      "from": "Enemy",
+      "to": "ShadowHealth.cs",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "ShadowHealth"
+      ]
+    },
+    {
+      "from": "Enemy",
+      "to": "Combat",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "CombatReadabilityFeedback"
+      ]
+    },
+    {
+      "from": "Enemy",
+      "to": "Soul",
+      "type": "dependsOn",
+      "weight": 2,
+      "references": [
+        "SoulObject",
+        "SoulPickup"
+      ]
+    },
+    {
+      "from": "Player",
+      "to": "Enemy",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "EnemyHealth"
+      ]
+    },
+    {
+      "from": "Player",
+      "to": "Summon",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "SummonCombat"
+      ]
+    },
+    {
+      "from": "Player",
+      "to": "Combat",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "CombatReadabilityFeedback"
+      ]
+    },
+    {
+      "from": "Shadow",
+      "to": "System",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "GameManager"
+      ]
+    },
+    {
+      "from": "Shadow",
+      "to": "Combat",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "CombatReadabilityFeedback"
+      ]
+    },
+    {
+      "from": "Soul",
+      "to": "System",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "GameManager"
+      ]
+    },
+    {
+      "from": "Soul",
+      "to": "Summon",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "SummonCombat"
+      ]
+    },
+    {
+      "from": "Summon",
+      "to": "Enemy",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "EnemyHealth"
+      ]
+    },
+    {
+      "from": "Summon",
+      "to": "Player",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "PlayerHealth"
+      ]
+    },
+    {
+      "from": "Summon",
+      "to": "Shadow",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "ShadowLevel"
+      ]
+    },
+    {
+      "from": "Summon",
+      "to": "Soul",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "SoulStats"
+      ]
+    },
+    {
+      "from": "Summon",
+      "to": "Combat",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "CombatReadabilityFeedback"
+      ]
+    },
+    {
+      "from": "System",
+      "to": "Army",
+      "type": "dependsOn",
+      "weight": 2,
+      "references": [
+        "ArmyRuntimeEntry",
+        "ArmyRuntimeManager"
+      ]
+    },
+    {
+      "from": "System",
+      "to": "Soul",
+      "type": "dependsOn",
+      "weight": 3,
+      "references": [
+        "SoulCollectionEntry",
+        "SoulData",
+        "SoulStats"
+      ]
+    },
+    {
+      "from": "System",
+      "to": "Summon",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "SummonFollow"
+      ]
+    },
+    {
+      "from": "ShadowHealth.cs",
+      "to": "System",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "GameManager"
+      ]
+    },
+    {
+      "from": "ShadowHealth.cs",
+      "to": "Combat",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "CombatReadabilityFeedback"
+      ]
+    },
+    {
+      "from": "Tutorial",
+      "to": "Enemy",
+      "type": "dependsOn",
+      "weight": 3,
+      "references": [
+        "EnemyHealth",
+        "EnemySoulDrop",
+        "EnemySpawner"
+      ]
+    },
+    {
+      "from": "Tutorial",
+      "to": "Soul",
+      "type": "dependsOn",
+      "weight": 3,
+      "references": [
+        "SoulObject",
+        "SoulPickup",
+        "SoulStats"
+      ]
+    },
+    {
+      "from": "Tutorial",
+      "to": "Player",
+      "type": "dependsOn",
+      "weight": 2,
+      "references": [
+        "PlayerMovement",
+        "PlayerAttack"
+      ]
+    },
+    {
+      "from": "Tutorial",
+      "to": "System",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "GameManager"
+      ]
+    },
+    {
+      "from": "Tutorial",
+      "to": "Summon",
+      "type": "dependsOn",
+      "weight": 1,
+      "references": [
+        "SummonCombat"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "feature": "Enemy",
+      "type": "high-dependency-count",
+      "message": "Enemy depends on 5 features."
+    },
+    {
+      "feature": "Player",
+      "type": "high-dependency-count",
+      "message": "Player depends on 3 features."
+    },
+    {
+      "feature": "Summon",
+      "type": "high-dependency-count",
+      "message": "Summon depends on 5 features."
+    },
+    {
+      "feature": "System",
+      "type": "high-dependency-count",
+      "message": "System depends on 3 features."
+    },
+    {
+      "feature": "System",
+      "type": "high-public-api-count",
+      "message": "System exposes many public methods."
+    },
+    {
+      "feature": "System",
+      "type": "todo-markers",
+      "message": "System has TODO/FIXME/BUG comments."
+    },
+    {
+      "feature": "System",
+      "type": "high-method-count",
+      "message": "System has many methods."
+    },
+    {
+      "feature": "Tutorial",
+      "type": "high-dependency-count",
+      "message": "Tutorial depends on 5 features."
+    },
+    {
+      "feature": "Tutorial",
+      "type": "high-public-api-count",
+      "message": "Tutorial exposes many public methods."
+    },
+    {
+      "feature": "Tutorial",
+      "type": "high-method-count",
+      "message": "Tutorial has many methods."
+    }
+  ],
+  "intelligence": [
+    {
+      "feature": "Army",
+      "hotspotLevel": "Low",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "Low",
+      "bottleneckRisk": "Low",
+      "circularArchitecture": [
+        {
+          "from": "Army",
+          "to": "System",
+          "confidence": "Possible"
+        }
+      ],
+      "refactorPriority": "Medium",
+      "findings": [
+        "Army has both incoming and outgoing dependencies.",
+        "Army participates in possible circular dependencies with System.",
+        "Army may be carrying multiple responsibilities."
+      ],
+      "suggestions": [
+        "Consider reducing bidirectional dependencies over time."
+      ],
+      "godObjectReasons": [],
+      "responsibilityReasons": [
+        "mixed incoming and outgoing dependencies"
+      ],
+      "bottleneckReasons": []
+    },
+    {
+      "feature": "Enemy",
+      "hotspotLevel": "Medium",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "High",
+      "bottleneckRisk": "Medium",
+      "circularArchitecture": [
+        {
+          "from": "Enemy",
+          "to": "Player",
+          "confidence": "Possible"
+        }
+      ],
+      "refactorPriority": "High",
+      "findings": [
+        "Enemy has both incoming and outgoing dependencies.",
+        "Enemy participates in possible circular dependencies with Player.",
+        "Enemy may have possible god object pressure.",
+        "Enemy may be carrying multiple responsibilities.",
+        "Enemy may act as an architectural bottleneck."
+      ],
+      "suggestions": [
+        "Review dependent features before changing coordination logic.",
+        "Changing this feature may affect multiple systems.",
+        "Consider reducing bidirectional dependencies over time."
+      ],
+      "godObjectReasons": [
+        "multiple responsibility domains",
+        "central incoming/outgoing role"
+      ],
+      "responsibilityReasons": [
+        "many outgoing dependencies",
+        "multiple responsibility domains",
+        "mixed incoming and outgoing dependencies"
+      ],
+      "bottleneckReasons": [
+        "many incoming dependencies",
+        "many outgoing dependencies"
+      ]
+    },
+    {
+      "feature": "Player",
+      "hotspotLevel": "Medium",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "High",
+      "bottleneckRisk": "Medium",
+      "circularArchitecture": [
+        {
+          "from": "Player",
+          "to": "Enemy",
+          "confidence": "Possible"
+        },
+        {
+          "from": "Player",
+          "to": "Summon",
+          "confidence": "Possible"
+        }
+      ],
+      "refactorPriority": "High",
+      "findings": [
+        "Player has both incoming and outgoing dependencies.",
+        "Player participates in possible circular dependencies with Enemy, Summon.",
+        "Player may have possible god object pressure.",
+        "Player may be carrying multiple responsibilities.",
+        "Player may act as an architectural bottleneck."
+      ],
+      "suggestions": [
+        "Review dependent features before changing coordination logic.",
+        "Changing this feature may affect multiple systems.",
+        "Consider reducing bidirectional dependencies over time."
+      ],
+      "godObjectReasons": [
+        "multiple responsibility domains",
+        "central incoming/outgoing role"
+      ],
+      "responsibilityReasons": [
+        "many outgoing dependencies",
+        "multiple responsibility domains",
+        "mixed incoming and outgoing dependencies"
+      ],
+      "bottleneckReasons": [
+        "many incoming dependencies",
+        "many outgoing dependencies"
+      ]
+    },
+    {
+      "feature": "Shadow",
+      "hotspotLevel": "Low",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "Low",
+      "bottleneckRisk": "Low",
+      "circularArchitecture": [],
+      "refactorPriority": "Low",
+      "findings": [
+        "Shadow has both incoming and outgoing dependencies.",
+        "Shadow may be carrying multiple responsibilities."
+      ],
+      "suggestions": [],
+      "godObjectReasons": [],
+      "responsibilityReasons": [
+        "mixed incoming and outgoing dependencies"
+      ],
+      "bottleneckReasons": []
+    },
+    {
+      "feature": "Soul",
+      "hotspotLevel": "Medium",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "Medium",
+      "bottleneckRisk": "Low",
+      "circularArchitecture": [
+        {
+          "from": "Soul",
+          "to": "System",
+          "confidence": "Possible"
+        },
+        {
+          "from": "Soul",
+          "to": "Summon",
+          "confidence": "Possible"
+        }
+      ],
+      "refactorPriority": "Medium",
+      "findings": [
+        "Soul has both incoming and outgoing dependencies.",
+        "Soul participates in possible circular dependencies with System, Summon.",
+        "Soul may be carrying multiple responsibilities.",
+        "Soul may act as an architectural bottleneck."
+      ],
+      "suggestions": [
+        "Changing this feature may affect multiple systems.",
+        "Consider reducing bidirectional dependencies over time."
+      ],
+      "godObjectReasons": [],
+      "responsibilityReasons": [
+        "mixed incoming and outgoing dependencies",
+        "many files"
+      ],
+      "bottleneckReasons": [
+        "many incoming dependencies"
+      ]
+    },
+    {
+      "feature": "Summon",
+      "hotspotLevel": "Medium",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "High",
+      "bottleneckRisk": "Medium",
+      "circularArchitecture": [
+        {
+          "from": "Summon",
+          "to": "Player",
+          "confidence": "Possible"
+        },
+        {
+          "from": "Summon",
+          "to": "Soul",
+          "confidence": "Possible"
+        }
+      ],
+      "refactorPriority": "High",
+      "findings": [
+        "Summon has both incoming and outgoing dependencies.",
+        "Summon participates in possible circular dependencies with Player, Soul.",
+        "Summon may have possible god object pressure.",
+        "Summon may be carrying multiple responsibilities.",
+        "Summon may act as an architectural bottleneck."
+      ],
+      "suggestions": [
+        "Review dependent features before changing coordination logic.",
+        "Changing this feature may affect multiple systems.",
+        "Consider reducing bidirectional dependencies over time."
+      ],
+      "godObjectReasons": [
+        "multiple responsibility domains",
+        "central incoming/outgoing role"
+      ],
+      "responsibilityReasons": [
+        "many outgoing dependencies",
+        "multiple responsibility domains",
+        "mixed incoming and outgoing dependencies"
+      ],
+      "bottleneckReasons": [
+        "many incoming dependencies",
+        "many outgoing dependencies"
+      ]
+    },
+    {
+      "feature": "System",
+      "hotspotLevel": "High",
+      "godObjectRisk": "High",
+      "responsibilityRisk": "High",
+      "bottleneckRisk": "High",
+      "circularArchitecture": [
+        {
+          "from": "System",
+          "to": "Army",
+          "confidence": "Possible"
+        },
+        {
+          "from": "System",
+          "to": "Soul",
+          "confidence": "Possible"
+        }
+      ],
+      "refactorPriority": "High",
+      "findings": [
+        "System has many methods or public APIs.",
+        "System has both incoming and outgoing dependencies.",
+        "System participates in possible circular dependencies with Army, Soul.",
+        "System may have possible god object pressure.",
+        "System may be carrying multiple responsibilities.",
+        "System may act as an architectural bottleneck."
+      ],
+      "suggestions": [
+        "Avoid adding unrelated methods to System.",
+        "Review public APIs before adding more.",
+        "Review dependent features before changing coordination logic.",
+        "Changing this feature may affect multiple systems.",
+        "Consider reducing bidirectional dependencies over time.",
+        "Consider splitting responsibilities if this feature keeps growing."
+      ],
+      "godObjectReasons": [
+        "many methods",
+        "many public APIs",
+        "multiple responsibility domains",
+        "central incoming/outgoing role"
+      ],
+      "responsibilityReasons": [
+        "many outgoing dependencies",
+        "multiple responsibility domains",
+        "mixed incoming and outgoing dependencies"
+      ],
+      "bottleneckReasons": [
+        "many incoming dependencies",
+        "many outgoing dependencies",
+        "large public API surface",
+        "many detailed code links"
+      ]
+    },
+    {
+      "feature": "General",
+      "hotspotLevel": "Low",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "Low",
+      "bottleneckRisk": "Low",
+      "circularArchitecture": [],
+      "refactorPriority": "Low",
+      "findings": [
+        "General may be carrying multiple responsibilities."
+      ],
+      "suggestions": [],
+      "godObjectReasons": [],
+      "responsibilityReasons": [
+        "many files"
+      ],
+      "bottleneckReasons": []
+    },
+    {
+      "feature": "DevOS",
+      "hotspotLevel": "Low",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "Low",
+      "bottleneckRisk": "Low",
+      "circularArchitecture": [],
+      "refactorPriority": "Low",
+      "findings": [
+        "DevOS may be carrying multiple responsibilities."
+      ],
+      "suggestions": [],
+      "godObjectReasons": [],
+      "responsibilityReasons": [
+        "many files"
+      ],
+      "bottleneckReasons": []
+    },
+    {
+      "feature": "Combat.meta",
+      "hotspotLevel": "Low",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "Low",
+      "bottleneckRisk": "Low",
+      "circularArchitecture": [],
+      "refactorPriority": "Low",
+      "findings": [],
+      "suggestions": [],
+      "godObjectReasons": [],
+      "responsibilityReasons": [],
+      "bottleneckReasons": []
+    },
+    {
+      "feature": "Combat",
+      "hotspotLevel": "Low",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "Low",
+      "bottleneckRisk": "Low",
+      "circularArchitecture": [],
+      "refactorPriority": "Low",
+      "findings": [
+        "Combat may act as an architectural bottleneck."
+      ],
+      "suggestions": [
+        "Changing this feature may affect multiple systems."
+      ],
+      "godObjectReasons": [],
+      "responsibilityReasons": [],
+      "bottleneckReasons": [
+        "many incoming dependencies"
+      ]
+    },
+    {
+      "feature": "ShadowHealth.cs",
+      "hotspotLevel": "Low",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "Low",
+      "bottleneckRisk": "Low",
+      "circularArchitecture": [],
+      "refactorPriority": "Low",
+      "findings": [
+        "ShadowHealth.cs has both incoming and outgoing dependencies.",
+        "ShadowHealth.cs may be carrying multiple responsibilities."
+      ],
+      "suggestions": [],
+      "godObjectReasons": [],
+      "responsibilityReasons": [
+        "mixed incoming and outgoing dependencies"
+      ],
+      "bottleneckReasons": []
+    },
+    {
+      "feature": "Tutorial.meta",
+      "hotspotLevel": "Low",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "Low",
+      "bottleneckRisk": "Low",
+      "circularArchitecture": [],
+      "refactorPriority": "Low",
+      "findings": [],
+      "suggestions": [],
+      "godObjectReasons": [],
+      "responsibilityReasons": [],
+      "bottleneckReasons": []
+    },
+    {
+      "feature": "Tutorial",
+      "hotspotLevel": "High",
+      "godObjectRisk": "High",
+      "responsibilityRisk": "High",
+      "bottleneckRisk": "Medium",
+      "circularArchitecture": [],
+      "refactorPriority": "High",
+      "findings": [
+        "Tutorial has many methods or public APIs.",
+        "Tutorial may have possible god object pressure.",
+        "Tutorial may be carrying multiple responsibilities.",
+        "Tutorial may act as an architectural bottleneck."
+      ],
+      "suggestions": [
+        "Avoid adding unrelated methods to Tutorial.",
+        "Review public APIs before adding more.",
+        "Review dependent features before changing coordination logic.",
+        "Consider splitting responsibilities if this feature keeps growing."
+      ],
+      "godObjectReasons": [
+        "many methods",
+        "many public APIs",
+        "multiple responsibility domains"
+      ],
+      "responsibilityReasons": [
+        "many outgoing dependencies",
+        "multiple responsibility domains",
+        "many files"
+      ],
+      "bottleneckReasons": [
+        "many outgoing dependencies",
+        "large public API surface",
+        "many detailed code links"
+      ]
+    },
+    {
+      "feature": "Interaction",
+      "hotspotLevel": "Low",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "Low",
+      "bottleneckRisk": "Low",
+      "circularArchitecture": [],
+      "refactorPriority": "Low",
+      "findings": [
+        "Interaction may be carrying multiple responsibilities."
+      ],
+      "suggestions": [],
+      "godObjectReasons": [],
+      "responsibilityReasons": [
+        "many files"
+      ],
+      "bottleneckReasons": []
+    }
+  ]
+}

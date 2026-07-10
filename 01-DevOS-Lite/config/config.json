@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "project": "The Wone: shadows",
+  "storage": {
+    "type": "ndjson",
+    "path": "./devos/storage/logs.ndjson"
+  },
+  "plugins": {
+    "git": true,
+    "terminal": false,
+    "filesystem": false,
+    "unity": false,
+    "mcp": false
+  }
+}

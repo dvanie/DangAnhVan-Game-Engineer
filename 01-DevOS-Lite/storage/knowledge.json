@@ -1,0 +1,306 @@
+{
+  "Army": {
+    "schemaVersion": "1.0",
+    "files": [
+      "Assets/Scripts/Army/ArmyRuntimeEntry.cs",
+      "Assets/Scripts/Army/ArmyRuntimeManager.cs"
+    ],
+    "commits": [
+      "27ba053b84829d215e612ad3d60bed15ed589933",
+      "9020b1a66ac561600eb9b791738086bcc6ec0704",
+      "8d7c8fab5b7e580097e5c06aa956c7f4896c98d7",
+      "17c3df525923a324f18f5899dc352b4da2624424"
+    ],
+    "updatedAt": "2026-07-09T19:10:07.941Z",
+    "updated": "2026-07-09T19:10:07.941Z"
+  },
+  "Enemy": {
+    "schemaVersion": "1.0",
+    "files": [
+      "Assets/Scripts/Enemy/EnemyAI.cs",
+      "Assets/Scripts/Enemy/EnemyHealth.cs",
+      "Assets/Scripts/Enemy/EnemySoulDrop.cs",
+      "Assets/Scripts/Enemy/EnemySpawner.cs"
+    ],
+    "commits": [
+      "20c3003b33f2c60acfcac0b75aedc730d61aecc9",
+      "5d3651cfa010ab50453dc244f58732626be6cf19",
+      "75c4cb75e54318069d5ae4843d3b96d06ffa7430"
+    ],
+    "updatedAt": "2026-07-09T19:10:07.941Z",
+    "updated": "2026-07-09T19:10:07.941Z"
+  },
+  "Player": {
+    "schemaVersion": "1.0",
+    "files": [
+      "Assets/Scripts/Player/Core/CameraFollow.cs",
+      "Assets/Scripts/Player/PlayerAttack.cs",
+      "Assets/Scripts/Player/PlayerHealth.cs",
+      "Assets/Scripts/Player/PlayerMovement.cs",
+      "Assets/Scripts/PlayerLevel.cs"
+    ],
+    "commits": [
+      "20c3003b33f2c60acfcac0b75aedc730d61aecc9",
+      "5d3651cfa010ab50453dc244f58732626be6cf19",
+      "0db56f90cf071a85020764a8a21c93c68d4aeb03",
+      "844789f49a34bbf340a78671f75ccf3d9b71f11f"
+    ],
+    "updatedAt": "2026-07-09T19:10:07.941Z",
+    "updated": "2026-07-09T19:10:07.941Z"
+  },
+  "Shadow": {
+    "schemaVersion": "1.0",
+    "files": [
+      "Assets/Scripts/ShadowHealth.cs",
+      "Assets/Scripts/ShadowLevel.cs"
+    ],
+    "commits": [],
+    "updatedAt": "2026-07-09T19:10:07.941Z",
+    "updated": "2026-07-09T19:10:07.941Z"
+  },
+  "Soul": {
+    "schemaVersion": "1.0",
+    "files": [
+      "Assets/Scripts/Soul/ShadowClass.cs",
+      "Assets/Scripts/Soul/SoulCollectionEntry.cs",
+      "Assets/Scripts/Soul/SoulData.cs",
+      "Assets/Scripts/Soul/SoulObject.cs",
+      "Assets/Scripts/Soul/SoulPickup.cs",
+      "Assets/Scripts/Soul/SoulRank.cs",
+      "Assets/Scripts/Soul/SoulStat.cs",
+      "Assets/Scripts/Soul/SoulState.cs",
+      "Assets/Scripts/Soul/SoulType.cs"
+    ],
+    "commits": [
+      "5d3651cfa010ab50453dc244f58732626be6cf19",
+      "29d6ce557735a51d146233662ff9892843fce202"
+    ],
+    "updatedAt": "2026-07-09T19:20:29.423Z",
+    "updated": "2026-07-09T19:20:29.423Z"
+  },
+  "Summon": {
+    "schemaVersion": "1.0",
+    "files": [
+      "Assets/Scripts/Summon/SummonCombat.cs",
+      "Assets/Scripts/Summon/SummonFollow.cs"
+    ],
+    "commits": [
+      "20c3003b33f2c60acfcac0b75aedc730d61aecc9"
+    ],
+    "updatedAt": "2026-07-09T19:10:07.941Z",
+    "updated": "2026-07-09T19:10:07.941Z"
+  },
+  "System": {
+    "schemaVersion": "1.0",
+    "files": [
+      "Assets/Scripts/System/ArmyEntry.cs",
+      "Assets/Scripts/System/ArmyManager.cs",
+      "Assets/Scripts/System/GameManager.cs"
+    ],
+    "commits": [
+      "27ba053b84829d215e612ad3d60bed15ed589933",
+      "9020b1a66ac561600eb9b791738086bcc6ec0704",
+      "bc7246e03be70c308827ba19ba1a09601317ac66",
+      "8d7c8fab5b7e580097e5c06aa956c7f4896c98d7",
+      "20c3003b33f2c60acfcac0b75aedc730d61aecc9",
+      "17c3df525923a324f18f5899dc352b4da2624424",
+      "71f2980d445a92fb1d35d6b347e0d141caf1df5f"
+    ],
+    "updatedAt": "2026-07-09T19:10:07.941Z",
+    "updated": "2026-07-09T19:10:07.941Z"
+  },
+  "General": {
+    "schemaVersion": "1.0",
+    "files": [
+      "Assets/Scenes/main.unity",
+      "Assets/Settings/UniversalRenderPipelineGlobalSettings.asset",
+      "Packages/packages-lock.json",
+      "Packages/manifest.json",
+      "ProjectSettings/PackageManagerSettings.asset",
+      "ProjectSettings/PhysicsCoreProjectSettings2D.asset",
+      "ProjectSettings/ProjectVersion.txt",
+      "Assets/New Terrain.asset",
+      "Assets/New Terrain.asset.meta",
+      "Assets/Prelab/Souls/SlimeSoul.prefab",
+      "Assets/Prelab/Souls/WolfSoul.prefab",
+      "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset",
+      "Assets/Tree.prefab",
+      "Assets/Tree.prefab.meta",
+      "Assets/Tree_Textures.meta",
+      "Assets/Tree_Textures/diffuse.png",
+      "Assets/Tree_Textures/diffuse.png.meta",
+      "Assets/Tree_Textures/normal_specular.png",
+      "Assets/Tree_Textures/normal_specular.png.meta",
+      "Assets/Tree_Textures/shadow.png",
+      "Assets/Tree_Textures/shadow.png.meta",
+      "Assets/Tree_Textures/translucency_gloss.png",
+      "Assets/Tree_Textures/translucency_gloss.png.meta",
+      "ProjectSettings/ProjectSettings.asset"
+    ],
+    "commits": [
+      "27ba053b84829d215e612ad3d60bed15ed589933",
+      "22ff388d1697d2c6171c2fced9ad38689b8b523a",
+      "17c3df525923a324f18f5899dc352b4da2624424",
+      "5d3651cfa010ab50453dc244f58732626be6cf19",
+      "a572ee0bd6bc2342c298b4ca6507c80a2ce9590a",
+      "23b62edb412b492f218c92267e9ea74c17d7bdb3",
+      "29d6ce557735a51d146233662ff9892843fce202"
+    ],
+    "updatedAt": "2026-07-09T19:20:29.423Z",
+    "updated": "2026-07-09T19:20:29.423Z"
+  },
+  "DevOS": {
+    "schemaVersion": "1.0",
+    "files": [
+      "devos/docs/unity-playmode-checklist.md",
+      "devos/CODEX_WORKFLOW.md",
+      "devos/core/engines/review.engine.js",
+      "devos/index.js",
+      "devos/core/engines/ask.engine.js",
+      "devos/core/engines/recipe.engine.js",
+      "devos/core/engines/task.engine.js",
+      "devos/core/engines/compiler.engine.js",
+      "devos/core/models/owned-files.model.js",
+      "devos/core/pipelines/context.pipeline.js",
+      "devos/core/engines/risk.engine.js",
+      "devos/core/engines/report.engine.js",
+      "devos/core/engines/feature-intelligence.engine.js",
+      "devos/core/engines/impact.engine.js"
+    ],
+    "commits": [
+      "27ba053b84829d215e612ad3d60bed15ed589933",
+      "17c3df525923a324f18f5899dc352b4da2624424",
+      "844789f49a34bbf340a78671f75ccf3d9b71f11f",
+      "6f87c15295871d906a00972765926bc35d35bedd",
+      "187b525f9792362bffa31590a0d862f6037ed7ec",
+      "64531adff636f67c4777076400ef328744b9f73c",
+      "baac648f51bbdfa1e4d9938e810787000387fd06",
+      "bdebd1db177f58cc20b1b6edccd3999252a69d75",
+      "bbd03d896d841649b6eaa64de2716244d70a585e",
+      "a1d5f4348a69d7268ea4b94167096ef70e977247",
+      "38220a21b11079011ed435c8128009d700c05933",
+      "439cdf3ddde83c3c096403b56435859cc8120c41",
+      "29d6ce557735a51d146233662ff9892843fce202"
+    ],
+    "updatedAt": "2026-07-09T19:20:29.423Z",
+    "updated": "2026-07-09T19:20:29.423Z"
+  },
+  "Combat.meta": {
+    "schemaVersion": "1.0",
+    "files": [
+      "Assets/Scripts/Combat.meta"
+    ],
+    "commits": [
+      "20c3003b33f2c60acfcac0b75aedc730d61aecc9"
+    ],
+    "updatedAt": "2026-07-06T15:49:36.264Z",
+    "updated": "2026-07-06T15:49:36.264Z"
+  },
+  "Combat": {
+    "schemaVersion": "1.0",
+    "files": [
+      "Assets/Scripts/Combat/CombatReadabilityFeedback.cs",
+      "Assets/Scripts/Combat/CombatReadabilityFeedback.cs.meta"
+    ],
+    "commits": [
+      "20c3003b33f2c60acfcac0b75aedc730d61aecc9"
+    ],
+    "updatedAt": "2026-07-09T19:10:07.941Z",
+    "updated": "2026-07-09T19:10:07.941Z"
+  },
+  "ShadowHealth.cs": {
+    "schemaVersion": "1.0",
+    "files": [
+      "Assets/Scripts/ShadowHealth.cs"
+    ],
+    "commits": [
+      "20c3003b33f2c60acfcac0b75aedc730d61aecc9"
+    ],
+    "updatedAt": "2026-07-06T15:49:36.264Z",
+    "updated": "2026-07-06T15:49:36.264Z"
+  },
+  "Tutorial.meta": {
+    "schemaVersion": "1.0",
+    "files": [
+      "Assets/Scripts/Tutorial.meta"
+    ],
+    "commits": [
+      "5d3651cfa010ab50453dc244f58732626be6cf19"
+    ],
+    "updatedAt": "2026-07-07T17:20:48.515Z",
+    "updated": "2026-07-07T17:20:48.515Z"
+  },
+  "Tutorial": {
+    "schemaVersion": "1.0",
+    "files": [
+      "Assets/Scripts/Tutorial/TutorialEncounterMarker.cs",
+      "Assets/Scripts/Tutorial/TutorialEncounterMarker.cs.meta",
+      "Assets/Scripts/Tutorial/TutorialHintTrigger.cs",
+      "Assets/Scripts/Tutorial/TutorialHintTrigger.cs.meta",
+      "Assets/Scripts/Tutorial/TutorialObjectiveUI.cs",
+      "Assets/Scripts/Tutorial/TutorialObjectiveUI.cs.meta",
+      "Assets/Scripts/Tutorial/TutorialQuestPlaceholder.cs",
+      "Assets/Scripts/Tutorial/TutorialQuestPlaceholder.cs.meta",
+      "Assets/Scripts/Tutorial/TutorialEncounterEnemyTracker.cs",
+      "Assets/Scripts/Tutorial/TutorialEncounterEnemyTracker.cs.meta",
+      "Assets/Scripts/Tutorial/TutorialCompletionDropTracker.cs",
+      "Assets/Scripts/Tutorial/TutorialStepController.cs",
+      "Assets/Scripts/Tutorial/TutorialCompletionDropTracker.cs.meta",
+      "Assets/Scripts/Tutorial/TutorialStepController.cs.meta",
+      "Assets/Scripts/Tutorial/TutorialAwakenStorySequence.cs",
+      "Assets/Scripts/Tutorial/TutorialAwakenStoryTrigger.cs",
+      "Assets/Scripts/Tutorial/TutorialStoryBeatFlow.cs",
+      "Assets/Scripts/Tutorial/TutorialAwakenStorySequence.cs.meta",
+      "Assets/Scripts/Tutorial/TutorialAwakenStoryTrigger.cs.meta",
+      "Assets/Scripts/Tutorial/TutorialStoryBeatFlow.cs.meta"
+    ],
+    "commits": [
+      "5d3651cfa010ab50453dc244f58732626be6cf19",
+      "0db56f90cf071a85020764a8a21c93c68d4aeb03",
+      "a572ee0bd6bc2342c298b4ca6507c80a2ce9590a",
+      "75c4cb75e54318069d5ae4843d3b96d06ffa7430",
+      "844789f49a34bbf340a78671f75ccf3d9b71f11f",
+      "71f2980d445a92fb1d35d6b347e0d141caf1df5f",
+      "23b62edb412b492f218c92267e9ea74c17d7bdb3"
+    ],
+    "updatedAt": "2026-07-09T19:10:07.941Z",
+    "updated": "2026-07-09T19:10:07.941Z"
+  },
+  "Interaction": {
+    "schemaVersion": "1.0",
+    "files": [
+      "Assets/Scripts/Interaction/IInteractable.cs",
+      "Assets/Scripts/Interaction/InteractableObject.cs",
+      "Assets/Scripts/Interaction/InteractionAction.cs",
+      "Assets/Scripts/Interaction/InteractionPromptUI.cs",
+      "Assets/Scripts/Interaction/InteractionType.cs",
+      "Assets/Scripts/Interaction/NPCIdentity.cs",
+      "Assets/Scripts/Interaction/PlayerInteractor.cs",
+      "Assets/Scripts/Interaction/ShowMessageAction.cs",
+      "Assets/Scripts/Interaction/IInteractable.cs.meta",
+      "Assets/Scripts/Interaction/InteractableObject.cs.meta",
+      "Assets/Scripts/Interaction/InteractionAction.cs.meta",
+      "Assets/Scripts/Interaction/InteractionPromptUI.cs.meta",
+      "Assets/Scripts/Interaction/InteractionType.cs.meta",
+      "Assets/Scripts/Interaction/NPCIdentity.cs.meta",
+      "Assets/Scripts/Interaction/PlayerInteractor.cs.meta",
+      "Assets/Scripts/Interaction/ShowMessageAction.cs.meta"
+    ],
+    "commits": [
+      "29d6ce557735a51d146233662ff9892843fce202"
+    ],
+    "updatedAt": "2026-07-09T19:20:29.423Z",
+    "updated": "2026-07-09T19:20:29.423Z"
+  },
+  "Interaction.meta": {
+    "schemaVersion": "1.0",
+    "files": [
+      "Assets/Scripts/Interaction.meta"
+    ],
+    "commits": [
+      "29d6ce557735a51d146233662ff9892843fce202"
+    ],
+    "updatedAt": "2026-07-09T19:20:29.423Z",
+    "updated": "2026-07-09T19:20:29.423Z"
+  }
+}

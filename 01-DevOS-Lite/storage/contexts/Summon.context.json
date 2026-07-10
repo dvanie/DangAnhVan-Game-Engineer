@@ -1,0 +1,565 @@
+{
+  "schemaVersion": "1.0",
+  "feature": "Summon",
+  "files": [
+    "Assets/Scripts/Summon/SummonCombat.cs",
+    "Assets/Scripts/Summon/SummonFollow.cs"
+  ],
+  "ownedFiles": [
+    "Assets/Scripts/Summon/"
+  ],
+  "integrationPoints": [
+    {
+      "feature": "Runtime",
+      "reason": "summon lifecycle checks and runtime spawn state",
+      "files": [
+        "Assets/Scripts/Runtime/"
+      ]
+    },
+    {
+      "feature": "Army",
+      "reason": "assigned soul slots and active team composition",
+      "files": [
+        "Assets/Scripts/Army/"
+      ]
+    },
+    {
+      "feature": "Soul",
+      "reason": "soul type/rank data used for summon identity",
+      "files": [
+        "Assets/Scripts/Soul/"
+      ]
+    }
+  ],
+  "commits": [
+    {
+      "hash": "20c3003b33f2c60acfcac0b75aedc730d61aecc9",
+      "shortHash": "20c3003b",
+      "message": "Improve combat readability and fix duplicate soul drop",
+      "createdAt": "2026-07-06T15:49:36.264Z",
+      "time": "2026-07-06T15:49:36.264Z"
+    }
+  ],
+  "decisions": [],
+  "dependencies": {
+    "schemaVersion": "1.0",
+    "generatedAt": "2026-07-09T19:10:07.977Z",
+    "files": {
+      "Assets/Scripts/Summon/SummonCombat.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "SummonCombat"
+        ],
+        "methods": [
+          {
+            "visibility": "private",
+            "name": "Start"
+          },
+          {
+            "visibility": "private",
+            "name": "Update"
+          },
+          {
+            "visibility": "private",
+            "name": "TickTargetSystem"
+          },
+          {
+            "visibility": "private",
+            "name": "AcquireTarget"
+          },
+          {
+            "visibility": "private",
+            "name": "IsElite"
+          },
+          {
+            "visibility": "private",
+            "name": "IsTargetStillValid"
+          },
+          {
+            "visibility": "private",
+            "name": "FindDangerZoneEnemy"
+          },
+          {
+            "visibility": "private",
+            "name": "TickStateSystem"
+          },
+          {
+            "visibility": "private",
+            "name": "ExecuteState"
+          },
+          {
+            "visibility": "private",
+            "name": "Idle"
+          },
+          {
+            "visibility": "private",
+            "name": "Chase"
+          },
+          {
+            "visibility": "private",
+            "name": "Attack"
+          },
+          {
+            "visibility": "public",
+            "name": "SetTarget"
+          },
+          {
+            "visibility": "public",
+            "name": "ClearTarget"
+          },
+          {
+            "visibility": "public",
+            "name": "HasTarget"
+          }
+        ],
+        "todos": [],
+        "references": [
+          {
+            "className": "EnemyHealth",
+            "feature": "Enemy",
+            "file": "Assets/Scripts/Enemy/EnemyHealth.cs"
+          },
+          {
+            "className": "PlayerHealth",
+            "feature": "Player",
+            "file": "Assets/Scripts/Player/PlayerHealth.cs"
+          },
+          {
+            "className": "ShadowLevel",
+            "feature": "Shadow",
+            "file": "Assets/Scripts/ShadowLevel.cs"
+          },
+          {
+            "className": "SoulStats",
+            "feature": "Soul",
+            "file": "Assets/Scripts/Soul/SoulStat.cs"
+          },
+          {
+            "className": "CombatReadabilityFeedback",
+            "feature": "Combat",
+            "file": "Assets/Scripts/Combat/CombatReadabilityFeedback.cs"
+          }
+        ],
+        "dependsOn": [
+          "Enemy",
+          "Player",
+          "Shadow",
+          "Soul",
+          "Combat"
+        ]
+      },
+      "Assets/Scripts/Summon/SummonFollow.cs": {
+        "namespace": null,
+        "usings": [
+          "UnityEngine"
+        ],
+        "classes": [
+          "SummonFollow"
+        ],
+        "methods": [
+          {
+            "visibility": "private",
+            "name": "Update"
+          },
+          {
+            "visibility": "private",
+            "name": "Start"
+          }
+        ],
+        "todos": [],
+        "references": [
+          {
+            "className": "PlayerHealth",
+            "feature": "Player",
+            "file": "Assets/Scripts/Player/PlayerHealth.cs"
+          },
+          {
+            "className": "SummonCombat",
+            "feature": "Summon",
+            "file": "Assets/Scripts/Summon/SummonCombat.cs"
+          }
+        ],
+        "dependsOn": [
+          "Player"
+        ]
+      }
+    },
+    "dependsOn": [
+      "Enemy",
+      "Player",
+      "Shadow",
+      "Soul",
+      "Combat"
+    ],
+    "details": {
+      "classUsage": [
+        {
+          "fromClass": "SummonCombat",
+          "toClass": "EnemyHealth",
+          "toFeature": "Enemy",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "SummonCombat",
+          "toClass": "PlayerHealth",
+          "toFeature": "Player",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "SummonCombat",
+          "toClass": "ShadowLevel",
+          "toFeature": "Shadow",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "SummonCombat",
+          "toClass": "SoulStats",
+          "toFeature": "Soul",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "SummonCombat",
+          "toClass": "CombatReadabilityFeedback",
+          "toFeature": "Combat",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "SummonFollow",
+          "toClass": "PlayerHealth",
+          "toFeature": "Player",
+          "confidence": "Possible"
+        },
+        {
+          "fromClass": "SummonFollow",
+          "toClass": "SummonCombat",
+          "toFeature": "Summon",
+          "confidence": "Possible"
+        }
+      ],
+      "methodCalls": [
+        {
+          "fromMethod": "Update",
+          "toMethod": "TickTargetSystem",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Update",
+          "toMethod": "TickStateSystem",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Update",
+          "toMethod": "ExecuteState",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "TickTargetSystem",
+          "toMethod": "AcquireTarget",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "TickTargetSystem",
+          "toMethod": "IsTargetStillValid",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "TickTargetSystem",
+          "toMethod": "ClearTarget",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "AcquireTarget",
+          "toMethod": "IsElite",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "AcquireTarget",
+          "toMethod": "FindDangerZoneEnemy",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "TickStateSystem",
+          "toMethod": "ClearTarget",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "ExecuteState",
+          "toMethod": "Idle",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "ExecuteState",
+          "toMethod": "Chase",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "ExecuteState",
+          "toMethod": "Attack",
+          "confidence": "Possible"
+        },
+        {
+          "fromMethod": "Attack",
+          "toMethod": "ClearTarget",
+          "confidence": "Possible"
+        }
+      ],
+      "publicApiUsage": [
+        {
+          "api": "SetTarget",
+          "fromFeature": "Player",
+          "toFeature": "Summon",
+          "className": "SummonCombat",
+          "confidence": "Possible API usage"
+        },
+        {
+          "api": "SetTarget",
+          "fromFeature": "Tutorial",
+          "toFeature": "Summon",
+          "className": "SummonCombat",
+          "confidence": "Possible API usage"
+        }
+      ],
+      "circularDependencies": [
+        {
+          "from": "Summon",
+          "to": "Player",
+          "confidence": "Possible"
+        },
+        {
+          "from": "Summon",
+          "to": "Soul",
+          "confidence": "Possible"
+        }
+      ],
+      "possibleUnusedApis": []
+    }
+  },
+  "insight": {
+    "classCount": 2,
+    "methodCount": 17,
+    "todoCount": 0,
+    "publicAPIs": [
+      "SetTarget",
+      "ClearTarget",
+      "HasTarget"
+    ],
+    "knownReferences": [
+      {
+        "className": "EnemyHealth",
+        "feature": "Enemy",
+        "file": "Assets/Scripts/Enemy/EnemyHealth.cs"
+      },
+      {
+        "className": "PlayerHealth",
+        "feature": "Player",
+        "file": "Assets/Scripts/Player/PlayerHealth.cs"
+      },
+      {
+        "className": "ShadowLevel",
+        "feature": "Shadow",
+        "file": "Assets/Scripts/ShadowLevel.cs"
+      },
+      {
+        "className": "SoulStats",
+        "feature": "Soul",
+        "file": "Assets/Scripts/Soul/SoulStat.cs"
+      },
+      {
+        "className": "CombatReadabilityFeedback",
+        "feature": "Combat",
+        "file": "Assets/Scripts/Combat/CombatReadabilityFeedback.cs"
+      },
+      {
+        "className": "SummonCombat",
+        "feature": "Summon",
+        "file": "Assets/Scripts/Summon/SummonCombat.cs"
+      }
+    ],
+    "riskHints": [
+      "Depends on Enemy, Player, Shadow, Soul, Combat"
+    ]
+  },
+  "architecture": {
+    "outgoing": [
+      {
+        "from": "Summon",
+        "to": "Enemy",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "EnemyHealth"
+        ]
+      },
+      {
+        "from": "Summon",
+        "to": "Player",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "PlayerHealth"
+        ]
+      },
+      {
+        "from": "Summon",
+        "to": "Shadow",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "ShadowLevel"
+        ]
+      },
+      {
+        "from": "Summon",
+        "to": "Soul",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "SoulStats"
+        ]
+      },
+      {
+        "from": "Summon",
+        "to": "Combat",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "CombatReadabilityFeedback"
+        ]
+      }
+    ],
+    "incoming": [
+      {
+        "from": "Player",
+        "to": "Summon",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "SummonCombat"
+        ]
+      },
+      {
+        "from": "Soul",
+        "to": "Summon",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "SummonCombat"
+        ]
+      },
+      {
+        "from": "System",
+        "to": "Summon",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "SummonFollow"
+        ]
+      },
+      {
+        "from": "Tutorial",
+        "to": "Summon",
+        "type": "dependsOn",
+        "weight": 1,
+        "references": [
+          "SummonCombat"
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "feature": "Summon",
+        "type": "high-dependency-count",
+        "message": "Summon depends on 5 features."
+      }
+    ],
+    "riskLevel": "Medium",
+    "intelligence": {
+      "feature": "Summon",
+      "hotspotLevel": "Medium",
+      "godObjectRisk": "Low",
+      "responsibilityRisk": "High",
+      "bottleneckRisk": "Medium",
+      "circularArchitecture": [
+        {
+          "from": "Summon",
+          "to": "Player",
+          "confidence": "Possible"
+        },
+        {
+          "from": "Summon",
+          "to": "Soul",
+          "confidence": "Possible"
+        }
+      ],
+      "refactorPriority": "High",
+      "findings": [
+        "Summon has both incoming and outgoing dependencies.",
+        "Summon participates in possible circular dependencies with Player, Soul.",
+        "Summon may have possible god object pressure.",
+        "Summon may be carrying multiple responsibilities.",
+        "Summon may act as an architectural bottleneck."
+      ],
+      "suggestions": [
+        "Review dependent features before changing coordination logic.",
+        "Changing this feature may affect multiple systems.",
+        "Consider reducing bidirectional dependencies over time."
+      ],
+      "godObjectReasons": [
+        "multiple responsibility domains",
+        "central incoming/outgoing role"
+      ],
+      "responsibilityReasons": [
+        "many outgoing dependencies",
+        "multiple responsibility domains",
+        "mixed incoming and outgoing dependencies"
+      ],
+      "bottleneckReasons": [
+        "many incoming dependencies",
+        "many outgoing dependencies"
+      ]
+    }
+  },
+  "summary": {
+    "feature": "Summon",
+    "shortDescription": "Gameplay feature responsible for summon flow, enemy behaviour, and combat flow.",
+    "responsibility": "Manages summon flow and active unit coordination, enemy behaviour and combat interactions, and combat flow and attack resolution.",
+    "mainPurpose": "Coordinates Summon Flow, Enemy Behaviour, and Combat Flow with Enemy, Player, Shadow, Soul, and Combat so collected units can participate in live gameplay.",
+    "mainAPIs": [
+      "SetTarget",
+      "ClearTarget",
+      "HasTarget"
+    ],
+    "riskSummary": "Medium risk due to multiple feature dependencies and many incoming dependents.",
+    "aiHint": "Changing public APIs may affect multiple gameplay systems. Review dependent features before modifying internal logic."
+  },
+  "updatedAt": "2026-07-09T19:10:08.391Z",
+  "updated": "2026-07-09T19:10:08.391Z",
+  "instruction": "Use this compiled context to understand the Summon system before suggesting code changes.",
+  "quality": {
+    "overallScore": 90,
+    "overallRating": "Excellent",
+    "aiReadiness": "Excellent",
+    "completeness": "Excellent",
+    "dependencyCoverage": "Excellent",
+    "architectureCoverage": "Excellent",
+    "summaryQuality": "Excellent",
+    "dependencyDetailConfidence": "Moderate",
+    "strengths": [
+      "Rich semantic summary",
+      "Clear responsibilities",
+      "Architecture risks detected",
+      "Public APIs documented",
+      "Good dependency information",
+      "AI guidance available"
+    ],
+    "weaknesses": [
+      "Few commits",
+      "No TODO information",
+      "No design decisions",
+      "Dependency details are mostly heuristic"
+    ]
+  }
+}
