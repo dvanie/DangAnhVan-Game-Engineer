@@ -8,7 +8,7 @@ of *The Wone: Shadows* (see `02-TWS-Lite`).
 
 ## Demo
 
-![Devos ask command demo](../docs/devos-demo.gif)]
+![Devos ask command demo](../docs/DevOS-Demo.gif)]
 
 ## Why
 
