@@ -6,6 +6,10 @@ A lightweight project-intelligence CLI I built to make AI coding agents
 work faster and cheaper on real codebases — built to support development 
 of *The Wone: Shadows* (see `02-TWS-Lite`).
 
+## Demo
+
+![Devos ask command demo](../docs/DevOS-Demo.gif)]
+
 ## Why
 
 AI agents burn tokens re-scanning a codebase for context on every task, 
