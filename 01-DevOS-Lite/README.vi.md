@@ -1,39 +1,29 @@
-# DevOS-Lite
+# DevOS
 
-*[English](README.md) | Tiếng Việt*
+*[English](README.md) · Tiếng Việt · [Portfolio](../README.vi.md)*
 
-Một CLI nhẹ mình xây để giúp AI coding agent làm việc nhanh và tiết 
-kiệm token hơn trên codebase thật — được tạo ra để hỗ trợ quá trình 
-phát triển *The Wone: Shadows* (xem `02-TWS-Lite`).
+**Công cụ phát triển · CLI Node.js · v0.6.1**
 
-## Demo
+Mình xây DevOS trong quá trình làm *The Wone: Shadows* để dễ tìm cấu trúc dự án, phụ thuộc và luật triển khai trước khi sửa gameplay.
 
-![Devos ask command demo](../docs/DevOS-Demo.gif)]
+## Cách hoạt động
 
+- **Gắn vào dự án.** Runtime cài bên ngoài dự án. Thư mục `.DevOS` lưu cấu hình dành riêng cho dự án và dữ liệu đã biên dịch.
+- **Biên dịch.** DevOS tìm tài nguyên, xác định tính năng nào sở hữu chúng, rồi dựng thông tin phụ thuộc và kiến trúc. Kết quả được gom theo tính năng, kèm file, contract và rủi ro liên quan.
+- **Tra cứu.** `ask` xếp hạng tính năng liên quan đến yêu cầu, `impact` chỉ ra các phần có thể bị ảnh hưởng, còn `adapter` xuất phần ngữ cảnh vừa đủ cho coding agent. Các lệnh tra cứu dựa trên dữ liệu đã biên dịch và cho kết quả theo quy tắc xác định.
 
-## Vì sao cần
+Ví dụ từ một dự án Unity đã khởi tạo:
 
-AI agent thường phải quét lại phần lớn codebase để lấy context cho 
-mỗi task, tốn rất nhiều token, và dễ đi lệch ra ngoài phạm vi được 
-giao. DevOS giải quyết việc này bằng cách biên dịch (compile) toàn bộ 
-project thành một lớp "project intelligence" có thể truy vấn — chia 
-theo feature, ai/cái gì sở hữu file nào, mức độ rủi ro khi thay đổi — 
-để agent chỉ đọc đúng phần cần thiết trước khi bắt tay vào sửa code.
-
-```
-Task → DevOS Ask → Feature liên quan + Risk Profile → Sửa đúng phạm vi → Verify → Report
+```bash
+devos compile --all
+devos ask "summon flow" --budget small
+devos impact "change how Shadow targets are selected"
 ```
 
-## Kết quả đạt được
+## Mã nguồn và kiểm thử
 
-- Giảm đáng kể lượng source code agent phải đọc cho mỗi task
-- Giữ thay đổi đúng phạm vi task, không lan sang hệ thống không liên quan
-- Giao được các task nhỏ/vừa cho agent mà không cần review quá kỹ
+Runtime hiện tại, hướng dẫn và bộ kiểm thử đều công khai. Bộ kiểm thử tạo dự án tạm để kiểm tra khởi tạo, quyền sở hữu tài nguyên, biên dịch, đóng gói CLI và quy trình làm việc.
 
-Quy trình đầy đủ: `docs/agent-workflow.md`
+[Mã nguồn DevOS hiện tại](https://github.com/Heavant/DevOS) · [Hướng dẫn sử dụng](https://github.com/Heavant/DevOS/blob/main/docs/DEVOS_PRODUCT_GUIDE.md) · [Bộ kiểm thử](https://github.com/Heavant/DevOS/tree/main/tests)
 
-## Về source code
-
-Phần core engine và logic CLI hiện đang để private (gắn liền với một 
-dự án đang phát triển thật). Nếu bạn quan tâm, mình rất sẵn lòng show 
-trực tiếp source code — liên hệ mình qua [email:danganhvan40@gmail.com].
+Thư mục này giữ mẫu **DevOS-Lite** và [ghi chú quy trình ban đầu](docs/agent-workflow.md). [Demo CLI giai đoạn đầu](../docs/DevOS-Demo.gif)

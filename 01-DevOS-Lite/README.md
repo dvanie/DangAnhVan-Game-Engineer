@@ -1,37 +1,29 @@
-*English | [Tiếng Việt](README.vi.md)*
+# DevOS
 
-# DevOS-Lite
+*English · [Tiếng Việt](README.vi.md) · [Portfolio](../README.md)*
 
-A lightweight project-intelligence CLI I built to make AI coding agents 
-work faster and cheaper on real codebases — built to support development 
-of *The Wone: Shadows* (see `02-TWS-Lite`).
+**Developer tooling · Node.js CLI · v0.6.1**
 
-## Demo
+I built DevOS while developing *The Wone: Shadows* to make project structure, dependencies, and implementation rules easier to discover before changing gameplay code.
 
-![Devos ask command demo](../docs/DevOS-Demo.gif)]
+## How it works
 
-## Why
+- **Project attachment.** The runtime installs outside the project. A project-local `.DevOS` attachment holds its configuration and generated intelligence.
+- **Compilation.** DevOS discovers project resources, resolves feature ownership, and builds dependency and architecture views. It compiles these into feature context with relevant files, contracts, and risks.
+- **Retrieval.** `ask` ranks relevant compiled features for a task, `impact` identifies affected features, and `adapter` exports a bounded payload for a coding agent. Retrieval is deterministic and uses the existing compiled evidence.
 
-AI agents burn tokens re-scanning a codebase for context on every task, 
-and tend to drift outside the requested scope. DevOS compiles the project 
-into a queryable intelligence layer instead — features, ownership, risk 
-profiles — so an agent reads only what's relevant before making a change.
+For example, from an initialized Unity project:
 
+```bash
+devos compile --all
+devos ask "summon flow" --budget small
+devos impact "change how Shadow targets are selected"
 ```
-Task → DevOS Ask → Relevant Features + Risk Profile → Scoped Change → Verify → Report
-```
 
-## What it did
+## Source and verification
 
-- Cut down how much source an agent needs to read per task
-- Kept changes scoped to the actual task, not adjacent systems
-- Made small/medium tasks safe to hand off with minimal review
+The current runtime, product guide, and regression suite are public. The regression suite uses disposable project fixtures to cover setup, ownership, compilation, CLI packaging, and workflow behavior.
 
-Full workflow protocol: `docs/agent-workflow.md`
+[Current DevOS source](https://github.com/Heavant/DevOS) · [Product guide](https://github.com/Heavant/DevOS/blob/main/docs/DEVOS_PRODUCT_GUIDE.md) · [Regression suite](https://github.com/Heavant/DevOS/tree/main/tests)
 
-## Source
-
-Core engine and CLI internals are kept private (tied to an active 
-project). Happy to walk through the code directly — reach out at 
-[email:danganhvan40@gmail.com].
-```
+This folder preserves the **DevOS-Lite** sample and [its original workflow notes](docs/agent-workflow.md). [Early CLI demo](../docs/DevOS-Demo.gif)

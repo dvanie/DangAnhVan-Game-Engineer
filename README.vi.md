@@ -1,35 +1,25 @@
 # Dang Anh Van — Game Engineer
 
-*[English](README.md) | Tiếng Việt*
+*[English](README.md) · Tiếng Việt*
 
-Hệ thống Gameplay Unity C# + CLI Project Intelligence
+Mình xây hệ thống gameplay bằng Unity và C#, đồng thời viết công cụ hỗ trợ phát triển khi dự án lớn dần.
 
-## Giới thiệu
+## Dự án
 
-Repo này giới thiệu hai phần công việc liên quan đến nhau trong quá 
-trình mình làm indie developer:
+### The Wone: Shadows · Unity / C#
 
-- **[`02-TWS-Lite`](./02-TWS-Lite)** — bản prototype chơi được ở giai 
-  đoạn đầu của *The Wone: Shadows*, một game action RPG nguyên bản 
-  xây bằng Unity/C#, xoay quanh cơ chế triệu hồi bóng tối và quản lý 
-  quân đoàn.
-- **[`01-DevOS-Lite`](./01-DevOS-Lite)** — công cụ CLI mình xây để 
-  cho AI coding agent một nguồn sự thật duy nhất cho dự án, giúp giảm 
-  lượng token sử dụng và hạn chế thay đổi vượt phạm vi trong quá trình 
-  phát triển.
+Dự án action RPG cá nhân, lấy cảm hứng từ văn hóa Việt Nam. **Bản chơi thử Haeryn** hiện nối phần mở đầu, khám phá, thu thập Shadow, xếp đội và chiến đấu. Đoạn này kết bằng nhiệm vụ bảo vệ xe tiếp tế, nơi người chơi và Shadow có thể giữ hai đối thủ khác nhau.
 
-The Wone: Shadows là dự án chính. DevOS-Lite được tạo ra để giải 
-quyết một điểm nghẽn thực tế phát sinh trong quá trình làm dự án đó.
+Mình xây combat và AI, vòng đời từng Shadow sở hữu, cùng checkpoint khôi phục đồng thời tiến độ nhiệm vụ và trạng thái đội hình. [Chi tiết kỹ thuật gameplay](02-TWS-Lite/README.vi.md)
 
-## Demo
+![Gameplay Haeryn với mục tiêu nhiệm vụ, minimap và Slime Leader trong đội](docs/tws-haeryn-gameplay.png)
 
+### DevOS · CLI Node.js
 
+Mình xây DevOS từ một vấn đề khi làm TWS: trước khi sửa một tính năng, cần đọc những file, hệ thống và luật nào? DevOS biên dịch dữ liệu về quyền sở hữu file, phụ thuộc và kiến trúc theo tính năng để người phát triển và coding agent có thể tra cứu ngay trong terminal.
 
-![Gameplay The Wone: Shadows prototype](docs/TWS-prototype-Demo.gif)
-
-
+Runtime hiện tại, hướng dẫn và bộ kiểm thử đều công khai. [Chi tiết kỹ thuật DevOS](01-DevOS-Lite/README.vi.md) · [Mã nguồn hiện tại](https://github.com/Heavant/DevOS)
 
 ## Liên hệ
 
-Portfolio, chi tiết dự án có sẵn khi được yêu cầu. liên hệ:
-danganhvan40@gmail.com
+Nếu muốn xem demo trực tiếp hoặc trao đổi quyền xem mã nguồn TWS hiện tại, bạn có thể [gửi email cho mình](mailto:danganhvan40@gmail.com). Portfolio có bản Unity mẫu chơi được và phần trình bày kỹ thuật của phiên bản hiện tại.
